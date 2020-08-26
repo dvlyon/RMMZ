@@ -1,0 +1,17 @@
+{
+	"core": {
+		"version": 1
+	},
+	"hud": {
+		"version": 1
+	},
+	"hudleader": {
+		"version": 1
+	},
+	"hudmap": {
+		"version": 1
+	},
+	"hudgold": {
+		"version": 1
+	},
+}
