@@ -252,19 +252,20 @@ function Game_DvLyon() {
 // Version Checker
 //=============================================================================
 
-/*function versionChecker() {
-	const url = "https://raw.githubusercontent.com/dvlyon/RMMV-Free/master/versions.json"
+function versionChecker() {
+	const url = "https://raw.githubusercontent.com/dvlyon/RMMZ/master/versions.json"
 	const request = new Request(url)
 	fetch(request)
 	.then(function(response) {
 		return response.json()
 	})
 	.then(function(body) {
-		if (body && (body.core > DvLyon.Core.version)) {
+		console.log(body.core.version)
+		if (body && body.core && (body.core.version > DvLyon.Core.version)) {
 			const text = 'An updated version of DvLyon_Core is available at https://games.dvlyon.com'
 			console.info(text)
 		}
 	})
 }
 
-versionChecker()*/
+versionChecker()
