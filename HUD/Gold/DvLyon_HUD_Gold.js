@@ -242,19 +242,18 @@ if (Imported.DvLyon_HUD_Core && DvLyon.HUDCore && DvLyon.HUDCore.version >= 1) {
 // Version Checker
 //=============================================================================
 
-/*function versionChecker() {
-	const url = "https://raw.githubusercontent.com/dvlyon/RMMV-Free/master/versions.json"
-	const request = new Request(url)
-	fetch(request)
-	.then(function(response) {
-		return response.json()
+function versionChecker() {
+	const url = 'https://raw.githubusercontent.com/dvlyon/RMMZ/master/versions.json'
+	fetch(url)
+	.then(res => {
+		return res.json()
 	})
 	.then(function(body) {
-		if (body && (body.core > DvLyon.Core.version)) {
-			const text = 'An updated version of DvLyon_Core is available at https://games.dvlyon.com'
+		if (body && body.hudgold && (body.hudgold.version > DvLyon.HUDGold.version)) {
+			const text = 'An updated version of DvLyon_HUD_Gold is available at https://games.dvlyon.com'
 			console.info(text)
 		}
 	})
 }
 
-versionChecker()*/
+versionChecker()
