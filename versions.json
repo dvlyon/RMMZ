@@ -1,17 +1,37 @@
 {
 	"core": {
+		"filename": "DvLyon_Core",
+		"name": "DvLyon Core",
+		"readme": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/Core/README.md",
+		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/Core/DvLyon_Core.js",
 		"version": 1
 	},
 	"hud": {
+		"filename": "DvLyon_HUD_Core",
+		"name": "DvLyon HUD Core",
+		"readme": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/README.md",
+		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/DvLyon_HUD_Core.js",
 		"version": 1
 	},
 	"hudleader": {
+		"filename": "DvLyon_HUD_Leader",
+		"name": "DvLyon HUD Leader",
+		"readme": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Leader/README.md",
+		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Leader/DvLyon_HUD_Leader.js",
 		"version": 1
 	},
 	"hudmap": {
+		"filename": "DvLyon_HUD_Map",
+		"name": "DvLyon HUD Map",
+		"readme": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Map/README.md",
+		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Map/DvLyon_HUD_Map.js",
 		"version": 1
 	},
 	"hudgold": {
+		"filename": "DvLyon_HUD_Gold",
+		"name": "DvLyon HUD Gold",
+		"readme": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Gold/README.md",
+		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Gold/DvLyon_HUD_Gold.js",
 		"version": 1
 	}
 }
