@@ -1,35 +1,45 @@
 {
 	"core": {
+		"excerpt": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/Core/excerpt.md",
 		"filename": "DvLyon_Core",
 		"name": "DvLyon Core",
+		"preview": "",
 		"readme": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/Core/README.md",
 		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/Core/DvLyon_Core.js",
 		"version": 1
 	},
 	"hud": {
+		"excerpt": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/excerpt.md",
 		"filename": "DvLyon_HUD_Core",
 		"name": "DvLyon HUD Core",
+		"preview": "",
 		"readme": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/README.md",
 		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/DvLyon_HUD_Core.js",
 		"version": 1
 	},
 	"hudleader": {
+		"excerpt": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Leader/excerpt.md",
 		"filename": "DvLyon_HUD_Leader",
 		"name": "DvLyon HUD Leader",
+		"preview": "",
 		"readme": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Leader/README.md",
 		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Leader/DvLyon_HUD_Leader.js",
 		"version": 1
 	},
 	"hudmap": {
+		"excerpt": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Map/excerpt.md",
 		"filename": "DvLyon_HUD_Map",
 		"name": "DvLyon HUD Map",
+		"preview": "",
 		"readme": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Map/README.md",
 		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Map/DvLyon_HUD_Map.js",
 		"version": 1
 	},
 	"hudgold": {
+		"excerpt": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Gold/excerpt.md",
 		"filename": "DvLyon_HUD_Gold",
 		"name": "DvLyon HUD Gold",
+		"preview": "",
 		"readme": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Gold/README.md",
 		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Gold/DvLyon_HUD_Gold.js",
 		"version": 1
