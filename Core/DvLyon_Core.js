@@ -218,7 +218,7 @@ function Game_DvLyon() {
 		this.contents.blt(bitmap, sx, sy, sw, sh, x, y, width, height)
 	}
 
-	Window_Base.prototype.drawBar = function(actor, x, y, width, height, base, color, rate) {
+	Window_Base.prototype.drawBar = function(x, y, width, height, base, color, rate) {
 		rate = Math.max(Math.min(rate, 1), 0)
 		let bitmap = ImageManager.loadDvLyon(base)
 		this.contents.blt(bitmap, 0, 0, bitmap.width, bitmap.height, x, y, width, height)
@@ -231,7 +231,7 @@ function Game_DvLyon() {
 	}
 
 	Window_Base.prototype.drawLifeBar = function(actor, x, y, width, height, base, color) {
-		this.drawBar(actor, x, y, width, height, base, color, actor.hpRate())
+		this.drawBar(x, y, width, height, base, color, actor.hpRate())
 	}
 
 	//=============================================================================

@@ -1,2 +1,3 @@
-# RMMZ
-Free plugins for RMMZ by DvLyon
+## DvLyon HUD Gold
+
+A HUD window to display the party's current gold amount.

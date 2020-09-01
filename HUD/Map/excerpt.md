@@ -1,2 +1,3 @@
-# RMMZ
-Free plugins for RMMZ by DvLyon
+## DvLyon HUD Map
+
+A HUD window to display the current map's name.
