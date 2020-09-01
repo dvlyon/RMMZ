@@ -51,12 +51,16 @@ Height of the Leader HUD window.
 ##### Background Health Bar
 ###### file
 
-File image of the background bar. Must be placed in img/dvlyon. A sample file is provided at bar.
+File image of the background bar. Must be placed in img/dvlyon. A sample file is provided:
+
+![bar](https://github.com/dvlyon/RMMZ/raw/master/HUD/Leader/Assets/bar.png)
 
 ##### Filled Health Bar
 ###### file
 
-File image of the filling bar. Must be placed in img/dvlyon. A sample file is provided at barFill.
+File image of the filling bar. Must be placed in img/dvlyon. A sample file is provided:
+
+![barFill](https://github.com/dvlyon/RMMZ/raw/master/HUD/Leader/Assets/barFill.png)
 
 #### Plugin Commands
 
