@@ -33,7 +33,7 @@ Contact:
 -------------------------------------------------------------------------------
 == Description ==
 
-DvLyon's Leader HUD
+Visit https://games.dvlyon.com/plugins/hudleader
 
 == License ==
 
@@ -41,21 +41,12 @@ DvLyon's Leader HUD
   License, v. 2.0. If a copy of the MPL was not distributed with this
   file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-== Terms of Use ==
+== Contributing ==
 
 If you could credit DvLyon and https://games.dvlyon.com, we'd really
 appreciate it!
 
 We want to keep growing and making your RMMZ experience better!
-
-== Change Log ==
-
-1.0.0 - Aug 26, 2020
- * (Release) Release.
-
-== Usage ==
-
-Install, activate and configure parameters.
 
 -------------------------------------------------------------------------------
  *
@@ -217,7 +208,7 @@ if (Imported.DvLyon_HUD_Core && DvLyon.HUDCore && DvLyon.HUDCore.version >= 1) {
 	// The window for displaying the Leader HUD.
 
 	function Window_DvLyonHUDLeader() {
-		this.initialize.apply(this, arguments)
+		this.initialize(...arguments)
 	}
 
 	Window_DvLyonHUDLeader.prototype = Object.create(Window_DvLyonHUD.prototype)
@@ -275,7 +266,7 @@ function versionChecker() {
 	})
 	.then(function(body) {
 		if (body && body.hudleader && (body.hudleader.version > DvLyon.HUDLeader.version)) {
-			const text = 'An updated version of DvLyon_HUD_Leader is available at https://games.dvlyon.com'
+			const text = 'An updated version of DvLyon_HUD_Leader is available at https://games.dvlyon.com/plugins/hudleader'
 			console.info(text)
 		}
 	})

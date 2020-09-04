@@ -1,10 +1,10 @@
-# DvLyon HUD Gold
+# DvLyon Unique Equips
 
 ## DvLyon Games - RMMZ
 
 ### Description
 
-DvLyon_HUD_Gold is a HUD module that simply shows the party's current amount of gold.
+DvLyon_UniqueEquips is the base for plugins that modify armours and/or weapons. Basically, it makes each equip unique (they no longer stack) so they can be individually modified.
 
 ### License
 
@@ -18,45 +18,11 @@ This plugin is distributed under the following license:
 
 ### Usage
 
-Simply install, activate and configure parameters.
-
-#### Parameters
-
-##### Gold HUD Default Visibility
-###### boolean
-
-True/False (Show/Hide) to show/hide the Gold HUD window by default.
-
-##### Gold HUD X
-###### number
-
-X position of the Gold HUD window.
-
-##### Gold HUD Y
-###### number
-
-Y position of the Gold HUD window.
-
-##### Gold HUD Width
-###### number
-
-Width of the Gold HUD window.
-
-##### Gold HUD Height
-###### number
-
-Height of the Gold HUD window.
-
-#### Plugin Commands
-
-##### Gold HUD Visibility
-###### Value: boolean
-
-True/False (Show/Hide) to show/hide the Gold HUD window.
+Simply install and activate.
 
 ### Changelog
 
-* 1.0.0 - Aug 26, 2020
+* 1.0.0 - Sep 03, 2020
 	* Release.
 
 ### Contributing

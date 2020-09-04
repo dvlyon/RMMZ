@@ -33,7 +33,7 @@ Contact:
 -------------------------------------------------------------------------------
 == Description ==
 
-DvLyon Core Functions for RMMZ.
+Visit https://games.dvlyon.com/plugins/core
 
 == License ==
 
@@ -41,21 +41,12 @@ DvLyon Core Functions for RMMZ.
   License, v. 2.0. If a copy of the MPL was not distributed with this
   file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-== Terms of Use ==
+== Contributing ==
 
 If you could credit DvLyon and https://games.dvlyon.com, we'd really
 appreciate it!
 
 We want to keep growing and making your RMMZ experience better!
-
-== Change Log ==
-
-1.0.0 - Aug 26, 2020
- * (Release) Release.
-
-== Usage ==
-
-Install, activate and configure parameters.
 
 -------------------------------------------------------------------------------
  *
@@ -108,7 +99,7 @@ function toBool(str, def) {
 var $gameDvLyon = null
 
 function Game_DvLyon() {
-	this.initialize.apply(this, arguments)
+	this.initialize(...arguments)
 }
 
 //=============================================================================
@@ -260,7 +251,7 @@ function versionChecker() {
 	})
 	.then(function(body) {
 		if (body && body.core && (body.core.version > DvLyon.Core.version)) {
-			const text = 'An updated version of DvLyon_Core is available at https://games.dvlyon.com'
+			const text = 'An updated version of DvLyon_Core is available at https://games.dvlyon.com/plugins/core'
 			console.info(text)
 		}
 	})

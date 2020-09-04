@@ -33,7 +33,7 @@ Contact:
 -------------------------------------------------------------------------------
 == Description ==
 
-DvLyon's HUD Core
+Visit https://games.dvlyon.com/plugins/hud
 
 == License ==
 
@@ -41,21 +41,12 @@ DvLyon's HUD Core
   License, v. 2.0. If a copy of the MPL was not distributed with this
   file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-== Terms of Use ==
+== Contributing ==
 
 If you could credit DvLyon and https://games.dvlyon.com, we'd really
 appreciate it!
 
 We want to keep growing and making your RMMZ experience better!
-
-== Change Log ==
-
-1.0.0 - Aug 26, 2020
- * (Release) Release.
-
-== Usage ==
-
-Install and activate.
 
 -------------------------------------------------------------------------------
  *
@@ -66,7 +57,7 @@ Install and activate.
 //=============================================================================
 
 function Window_DvLyonHUD() {
-	this.initialize.apply(this, arguments)
+	this.initialize(...arguments)
 }
 
 //=============================================================================
@@ -165,7 +156,7 @@ function versionChecker() {
 	})
 	.then(function(body) {
 		if (body && body.hud && (body.hud.version > DvLyon.HUDCore.version)) {
-			const text = 'An updated version of DvLyon_HUD_Core is available at https://games.dvlyon.com'
+			const text = 'An updated version of DvLyon_HUD_Core is available at https://games.dvlyon.com/plugins/hud'
 			console.info(text)
 		}
 	})

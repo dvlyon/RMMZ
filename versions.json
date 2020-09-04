@@ -4,6 +4,7 @@
 		"filename": "DvLyon_Core",
 		"name": "DvLyon Core",
 		"preview": "",
+		"priority": "normal",
 		"readme": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/Core/README.md",
 		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/Core/DvLyon_Core.js",
 		"version": 1
@@ -13,6 +14,7 @@
 		"filename": "DvLyon_HUD_Core",
 		"name": "DvLyon HUD Core",
 		"preview": "",
+		"priority": "normal",
 		"readme": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/README.md",
 		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/DvLyon_HUD_Core.js",
 		"version": 1
@@ -22,6 +24,7 @@
 		"filename": "DvLyon_HUD_Leader",
 		"name": "DvLyon HUD Leader",
 		"preview": "",
+		"priority": "normal",
 		"readme": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Leader/README.md",
 		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Leader/DvLyon_HUD_Leader.js",
 		"version": 1
@@ -31,6 +34,7 @@
 		"filename": "DvLyon_HUD_Map",
 		"name": "DvLyon HUD Map",
 		"preview": "",
+		"priority": "normal",
 		"readme": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Map/README.md",
 		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Map/DvLyon_HUD_Map.js",
 		"version": 1
@@ -40,8 +44,19 @@
 		"filename": "DvLyon_HUD_Gold",
 		"name": "DvLyon HUD Gold",
 		"preview": "",
+		"priority": "normal",
 		"readme": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Gold/README.md",
 		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Gold/DvLyon_HUD_Gold.js",
+		"version": 1
+	},
+	"uniqueEquips": {
+		"excerpt": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/UniqueEquips/excerpt.md",
+		"filename": "DvLyon_UniqueEquips",
+		"name": "DvLyon Unique Equips",
+		"preview": "",
+		"priority": "normal",
+		"readme": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/UniqueEquips/README.md",
+		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/UniqueEquips/DvLyon_UniqueEquips.js",
 		"version": 1
 	}
 }
