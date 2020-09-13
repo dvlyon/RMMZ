@@ -103,10 +103,24 @@ Draws an image-based bar to display a rate (i.e: hp, mp). x, y, width and height
 
 Draws an image-based bar to display hp rate. The actor is any of the Game_Actor class. x, y, width and height are straightforward. base and color are, respectively, the base image and the the one to display on top (according to the rate). And the rate is a number between 0 and 1.
 
+##### Window_Base.prototype.drawManaBar = function(actor, x, y, width, height, base, color)
+###### actor: Game_Actor()
+###### x: number
+###### y: number
+###### width: number
+###### height: number
+###### base: string
+###### color: string
+###### rate: number
+
+Draws an image-based bar to display mp rate. The actor is any of the Game_Actor class. x, y, width and height are straightforward. base and color are, respectively, the base image and the the one to display on top (according to the rate). And the rate is a number between 0 and 1.
+
 ### Changelog
 
+* 1.1.0 - Sep 13. 2020
+  * Added drawManaBar method to windows.
 * 1.0.0 - Aug 26, 2020
-	* Release.
+  * Release.
 
 ### Contributing
 

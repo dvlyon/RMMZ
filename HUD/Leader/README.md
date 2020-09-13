@@ -25,27 +25,27 @@ Simply install, activate and configure parameters.
 ##### Leader HUD Default Visibility
 ###### boolean
 
-True/False (Show/Hide) to show/hide the Leader HUD window by default.
+True/False (Show/Hide) to show/hide the leader HUD window by default.
 
 ##### Leader HUD X
 ###### number
 
-X position of the Leader HUD window.
+X position of the leader HUD window.
 
 ##### Leader HUD Y
 ###### number
 
-Y position of the Leader HUD window.
+Y position of the leader HUD window.
 
 ##### Leader HUD Width
 ###### number
 
-Width of the Leader HUD window.
+Width of the leader HUD window.
 
-##### Leader HUD Height
-###### number
+##### Display Mana Bar
+###### boolean
 
-Height of the Leader HUD window.
+True/False (Yes/No) whether to display the leader's mana bar or not.
 
 ##### Background Health Bar
 ###### file
@@ -61,6 +61,25 @@ File image of the filling bar. Must be placed in img/dvlyon. A sample file is pr
 
 ![barFill](https://github.com/dvlyon/RMMZ/raw/master/HUD/Leader/Assets/barFill.png)
 
+##### Background Mana Bar
+###### file
+
+File image of the background mana bar. Must be placed in img/dvlyon. A sample file is provided:
+
+![bar](https://github.com/dvlyon/RMMZ/raw/master/HUD/Leader/Assets/bar.png)
+
+##### Filled Mana Bar
+###### file
+
+File image of the filling mana bar. Must be placed in img/dvlyon. A sample file is provided:
+
+![barFill](https://github.com/dvlyon/RMMZ/raw/master/HUD/Leader/Assets/manaBarFill.png)
+
+##### Windowskin
+###### file
+
+File image for the leader HUD windowskin. Must be placed in img/system.
+
 #### Plugin Commands
 
 ##### Leader HUD Visibility
@@ -70,8 +89,12 @@ True/False (Show/Hide) to show/hide the Leader HUD window.
 
 ### Changelog
 
+* 1.1.0 - Sep 13, 2020
+  * Remove height parameter.
+  * Added options to display mana bar.
+  * Added option to change windowskin.
 * 1.0.0 - Aug 26, 2020
-	* Release.
+  * Release.
 
 ### Contributing
 

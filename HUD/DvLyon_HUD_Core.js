@@ -10,15 +10,15 @@ Imported.DvLyon_HUD_Core = true;
 
 var DvLyon = DvLyon || {};
 DvLyon.HUDCore = DvLyon.HUDCore || {};
-DvLyon.HUDCore.version = 1;
+DvLyon.HUDCore.version = 1.1;
 
 /*:
 -------------------------------------------------------------------------------
 @target MZ
 @title DvLyon HUD Core
 @author DvLyon Games @ https://games.dvlyon.com
-@date Aug 26, 2020
-@version 1.0.0
+@date Sep 13, 2020
+@version 1.1.0
 @filename DvLyon_HUD_Core.js
 @url https://games.dvlyon.com
 
@@ -64,7 +64,7 @@ function Window_DvLyonHUD() {
 // Dependencies
 //=============================================================================
 
-if (Imported.DvLyon_Core && DvLyon.Core && DvLyon.Core.version >= 1) {
+if (Imported.DvLyon_Core && DvLyon.Core && DvLyon.Core.version >= 1.1) {
 
 //=============================================================================
 // Plugin Start
@@ -127,7 +127,12 @@ if (Imported.DvLyon_Core && DvLyon.Core && DvLyon.Core.version >= 1) {
 	Window_DvLyonHUD.prototype.update = function() {
 		Window_Base.prototype.update.call(this)
 		this.contents.clear()
-		this.refresh()
+		if ($gameMessage.isBusy()) {
+			this.close()
+		} else {
+			this.open()
+			this.refresh()
+		}
 	}
 
 	Window_DvLyonHUD.prototype.refresh = function() {}

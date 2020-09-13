@@ -25,27 +25,27 @@ Simply install, activate and configure parameters.
 ##### Map HUD Default Visibility
 ###### boolean
 
-True/False (Show/Hide) to show/hide the Map HUD window by default.
+True/False (Show/Hide) to show/hide the map HUD window by default.
 
 ##### Map HUD X
 ###### number
 
-X position of the Map HUD window.
+X position of the map HUD window.
 
 ##### Map HUD Y
 ###### number
 
-Y position of the Map HUD window.
+Y position of the map HUD window.
 
 ##### Map HUD Width
 ###### number
 
-Width of the Map HUD window.
+Width of the map HUD window.
 
-##### Map HUD Height
-###### number
+##### Windowskin
+###### file
 
-Height of the Map HUD window.
+File image for the map HUD windowskin. Must be placed in img/system.
 
 #### Plugin Commands
 
@@ -56,8 +56,11 @@ True/False (Show/Hide) to show/hide the Map HUD window.
 
 ### Changelog
 
+* 1.1.0 - Sep 13, 2020
+  * Remove height parameter.
+  * Added option to change windowskin.
 * 1.0.0 - Aug 26, 2020
-	* Release.
+  * Release.
 
 ### Contributing
 

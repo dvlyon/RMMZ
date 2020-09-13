@@ -56,8 +56,10 @@ Adds HUD windows. Called after createAllWindows().
 
 ### Changelog
 
+* 1.1.0 - Sep 13, 2020
+  * HUD windows now hide when a game message appears.
 * 1.0.0 - Aug 26, 2020
-	* Release.
+  * Release.
 
 ### Contributing
 

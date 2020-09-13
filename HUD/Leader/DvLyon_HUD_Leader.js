@@ -10,15 +10,15 @@ Imported.DvLyon_HUD_Leader = true;
 
 var DvLyon = DvLyon || {};
 DvLyon.HUDLeader = DvLyon.HUDLeader || {};
-DvLyon.HUDLeader.version = 1;
+DvLyon.HUDLeader.version = 1.1;
 
 /*:
 -------------------------------------------------------------------------------
 @target MZ
 @title DvLyon HUD Leader
 @author DvLyon Games @ https://games.dvlyon.com
-@date Aug 26, 2020
-@version 1.0.0
+@date Sep 13, 2020
+@version 1.1.0
 @filename DvLyon_HUD_Leader.js
 @url https://games.dvlyon.com
 
@@ -52,7 +52,7 @@ We want to keep growing and making your RMMZ experience better!
  *
  * @command showHUD
  * @text Leader HUD Visibility
- * @desc Sets Leader HUD visibility on/off.
+ * @desc Sets leader HUD visibility on/off.
  *
  * @arg value
  * @type boolean
@@ -82,18 +82,20 @@ We want to keep growing and making your RMMZ experience better!
  * @desc Y position of the leader HUD.
  * @type number
  * @default 528
-  *
+ *
  * @param Width
  * @text Leader HUD Width
  * @desc Width of the leader HUD.
  * @type number
  * @default 240
  *
- * @param Height
- * @text Leader HUD Height
- * @desc Height of the leader HUD.
- * @type number
- * @default 96
+ * @param Mana
+ * @text Display Mana Bar
+ * @desc Should the mana bar be displayed?
+ * @type boolean
+ * @on Yes
+ * @off No
+ * @default false
  *
  * @param Bar
  * @text Background Health Bar
@@ -111,13 +113,37 @@ We want to keep growing and making your RMMZ experience better!
  * @require 1
  * @default
  *
+ * @param ManaBar
+ * @text Background Mana Bar
+ * @desc Background mana bar image.
+ * @type file
+ * @dir img/dvlyon/
+ * @require 1
+ * @default
+ *
+ * @param ManaBarFill
+ * @text Filled Mana Bar
+ * @desc Filled mana bar image.
+ * @type file
+ * @dir img/dvlyon/
+ * @require 1
+ * @default
+ *
+ * @param Window
+ * @text Windowskin
+ * @desc Windowskin for the leader HUD.
+ * @type file
+ * @dir img/system/
+ * @require 1
+ * @default Window
+ *
 */
 
 //=============================================================================
 // Dependencies
 //=============================================================================
 
-if (Imported.DvLyon_HUD_Core && DvLyon.HUDCore && DvLyon.HUDCore.version >= 1) {
+if (Imported.DvLyon_HUD_Core && DvLyon.HUDCore && DvLyon.HUDCore.version >= 1.1) {
 
 //=============================================================================
 // Plugin Start
@@ -135,9 +161,12 @@ if (Imported.DvLyon_HUD_Core && DvLyon.HUDCore && DvLyon.HUDCore.version >= 1) {
 	DvLyon.HUDLeader.X = toNumber(DvLyon.HUDLeader.Parameters['X'], 0)
 	DvLyon.HUDLeader.Y = toNumber(DvLyon.HUDLeader.Parameters['Y'], 528)
 	DvLyon.HUDLeader.Width = toNumber(DvLyon.HUDLeader.Parameters['Width'], 240)
-	DvLyon.HUDLeader.Height = toNumber(DvLyon.HUDLeader.Parameters['Height'], 96)
+	DvLyon.HUDLeader.Mana = toBool(DvLyon.HUDLeader.Parameters['Mana'], false)
 	DvLyon.HUDLeader.Bar = DvLyon.HUDLeader.Parameters['Bar']
 	DvLyon.HUDLeader.BarFill = DvLyon.HUDLeader.Parameters['BarFill']
+	DvLyon.HUDLeader.ManaBar = DvLyon.HUDLeader.Parameters['ManaBar']
+	DvLyon.HUDLeader.ManaBarFill = DvLyon.HUDLeader.Parameters['ManaBarFill']
+	DvLyon.HUDLeader.Window = DvLyon.HUDLeader.Parameters['Window']
 
 	//=============================================================================
 	// Managers
@@ -162,7 +191,7 @@ if (Imported.DvLyon_HUD_Core && DvLyon.HUDCore && DvLyon.HUDCore.version >= 1) {
 	}
 
 	Game_DvLyon.prototype.isLeaderHUDVisible = function() {
-		return this._showLeaderHUD
+		return !!this._showLeaderHUD && $gameParty.leader()
 	}
 
 	Game_DvLyon.prototype.setLeaderHUDVisibility = function(value) {
@@ -218,12 +247,12 @@ if (Imported.DvLyon_HUD_Core && DvLyon.HUDCore && DvLyon.HUDCore.version >= 1) {
 		const x = DvLyon.HUDLeader.X
 		const y = DvLyon.HUDLeader.Y
 		const width = DvLyon.HUDLeader.Width
-		const height = DvLyon.HUDLeader.Height
+		const height = this.lineHeight() * (DvLyon.HUDLeader.Mana ? 3 : 2) + 24
 		Window_DvLyonHUD.prototype.initialize.call(this, new Rectangle(x, y, width, height))
 	}
 
-	Window_DvLyonHUDLeader.prototype.healthBarWidth = function() {
-		return 186
+	Window_DvLyonHUDLeader.prototype.loadWindowskin = function() {
+		this.windowskin = ImageManager.loadSystem(DvLyon.HUDLeader.Window)
 	}
 
 	Window_DvLyonHUDLeader.prototype.refresh = function() {
@@ -239,6 +268,11 @@ if (Imported.DvLyon_HUD_Core && DvLyon.HUDCore && DvLyon.HUDCore.version >= 1) {
 			const bar = DvLyon.HUDLeader.Bar
 			const barFill = DvLyon.HUDLeader.BarFill
 			this.drawLifeBar(leader, x, lineHeight, width, lineHeight, bar, barFill)
+			if (DvLyon.HUDLeader.Mana) {
+				const manaBar = DvLyon.HUDLeader.ManaBar
+				const manaBarFill = DvLyon.HUDLeader.ManaBarFill
+				this.drawManaBar(leader, x, lineHeight * 2, width, lineHeight, manaBar, manaBarFill)
+			}
 		}
 	}
 

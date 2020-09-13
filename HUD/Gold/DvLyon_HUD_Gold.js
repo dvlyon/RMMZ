@@ -10,15 +10,15 @@ Imported.DvLyon_HUD_Gold = true;
 
 var DvLyon = DvLyon || {};
 DvLyon.HUDGold = DvLyon.HUDGold || {};
-DvLyon.HUDGold.version = 1;
+DvLyon.HUDGold.version = 1.1;
 
 /*:
 -------------------------------------------------------------------------------
 @target MZ
 @title DvLyon HUD Gold
 @author DvLyon Games @ https://games.dvlyon.com
-@date Aug 26, 2020
-@version 1.0.0
+@date Sep 13, 2020
+@version 1.1.0
 @filename DvLyon_HUD_Gold.js
 @url https://games.dvlyon.com
 
@@ -52,7 +52,7 @@ We want to keep growing and making your RMMZ experience better!
  *
  * @command showHUD
  * @text Gold HUD Visibility
- * @desc Sets Gold HUD visibility on/off.
+ * @desc Sets gold HUD visibility on/off.
  *
  * @arg value
  * @type boolean
@@ -65,7 +65,7 @@ We want to keep growing and making your RMMZ experience better!
  *
  * @param Default
  * @text Gold HUD Default Visibility
- * @desc Default visibility of the Gold HUD. (Default: Show)
+ * @desc Default visibility of the gold HUD. (Default: Show)
  * @type boolean
  * @on Show
  * @off Hide
@@ -73,27 +73,29 @@ We want to keep growing and making your RMMZ experience better!
  *
  * @param X
  * @text Gold HUD X
- * @desc X position of the Gold HUD.
+ * @desc X position of the gold HUD.
  * @type number
  * @default 576
  *
  * @param Y
  * @text Gold HUD Y
- * @desc Y position of the Gold HUD.
+ * @desc Y position of the gold HUD.
  * @type number
  * @default 564
   *
  * @param Width
  * @text Gold HUD Width
- * @desc Width of the Gold HUD.
+ * @desc Width of the gold HUD.
  * @type number
  * @default 240
  *
- * @param Height
- * @text Gold HUD Height
- * @desc Height of the Gold HUD.
- * @type number
- * @default 60
+ * @param Window
+ * @text Windowskin
+ * @desc Windowskin for the gold HUD.
+ * @type file
+ * @dir img/system/
+ * @require 1
+ * @default Window
  *
 */
 
@@ -101,7 +103,7 @@ We want to keep growing and making your RMMZ experience better!
 // Dependencies
 //=============================================================================
 
-if (Imported.DvLyon_HUD_Core && DvLyon.HUDCore && DvLyon.HUDCore.version >= 1) {
+if (Imported.DvLyon_HUD_Core && DvLyon.HUDCore && DvLyon.HUDCore.version >= 1.1) {
 
 //=============================================================================
 // Plugin Start
@@ -119,7 +121,7 @@ if (Imported.DvLyon_HUD_Core && DvLyon.HUDCore && DvLyon.HUDCore.version >= 1) {
 	DvLyon.HUDGold.X = toNumber(DvLyon.HUDGold.Parameters['X'], 576)
 	DvLyon.HUDGold.Y = toNumber(DvLyon.HUDGold.Parameters['Y'], 564)
 	DvLyon.HUDGold.Width = toNumber(DvLyon.HUDGold.Parameters['Width'], 240)
-	DvLyon.HUDGold.Height = toNumber(DvLyon.HUDGold.Parameters['Height'], 60)
+	DvLyon.HUDGold.Window = DvLyon.HUDGold.Parameters['Window']
 
 	//=============================================================================
 	// Managers
@@ -144,7 +146,7 @@ if (Imported.DvLyon_HUD_Core && DvLyon.HUDCore && DvLyon.HUDCore.version >= 1) {
 	}
 
 	Game_DvLyon.prototype.isGoldHUDVisible = function() {
-		return this._showGoldHUD
+		return !!this._showGoldHUD
 	}
 
 	Game_DvLyon.prototype.setGoldHUDVisibility = function(value) {
@@ -200,8 +202,12 @@ if (Imported.DvLyon_HUD_Core && DvLyon.HUDCore && DvLyon.HUDCore.version >= 1) {
 		const x = DvLyon.HUDGold.X
 		const y = DvLyon.HUDGold.Y
 		const width = DvLyon.HUDGold.Width
-		const height = DvLyon.HUDGold.Height
+		const height = this.lineHeight() + 24
 		Window_DvLyonHUD.prototype.initialize.call(this, new Rectangle(x, y, width, height))
+	}
+
+	Window_DvLyonHUDGold.prototype.loadWindowskin = function() {
+		this.windowskin = ImageManager.loadSystem(DvLyon.HUDGold.Window)
 	}
 
 	Window_DvLyonHUDGold.prototype.refresh = function() {

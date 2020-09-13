@@ -10,15 +10,15 @@ Imported.DvLyon_Core = true;
 
 var DvLyon = DvLyon || {};
 DvLyon.Core = DvLyon.Core || {};
-DvLyon.Core.version = 1;
+DvLyon.Core.version = 1.1;
 
 /*:
 -------------------------------------------------------------------------------
 @target MZ
 @title DvLyon Core
 @author DvLyon Games @ https://games.dvlyon.com
-@date Aug 26, 2020
-@version 1.0.0
+@date Sep 13, 2020
+@version 1.1.0
 @filename DvLyon_Core.js
 @url https://games.dvlyon.com
 
@@ -205,7 +205,7 @@ function Game_DvLyon() {
 		const sw = ImageManager.faceWidth
 		const sh = ImageManager.faceHeight
 		const sx = (faceIndex % 4) * sw
-		const sy = Math.floor(faceIndex / 4)
+		const sy = Math.floor(faceIndex / 4) * sh
 		this.contents.blt(bitmap, sx, sy, sw, sh, x, y, width, height)
 	}
 
@@ -223,6 +223,10 @@ function Game_DvLyon() {
 
 	Window_Base.prototype.drawLifeBar = function(actor, x, y, width, height, base, color) {
 		this.drawBar(x, y, width, height, base, color, actor.hpRate())
+	}
+
+	Window_Base.prototype.drawManaBar = function(actor, x, y, width, height, base, color) {
+		this.drawBar(x, y, width, height, base, color, actor.mpRate())
 	}
 
 	//=============================================================================

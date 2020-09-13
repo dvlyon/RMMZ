@@ -25,27 +25,27 @@ Simply install, activate and configure parameters.
 ##### Gold HUD Default Visibility
 ###### boolean
 
-True/False (Show/Hide) to show/hide the Gold HUD window by default.
+True/False (Show/Hide) to show/hide the gold HUD window by default.
 
 ##### Gold HUD X
 ###### number
 
-X position of the Gold HUD window.
+X position of the gold HUD window.
 
 ##### Gold HUD Y
 ###### number
 
-Y position of the Gold HUD window.
+Y position of the gold HUD window.
 
 ##### Gold HUD Width
 ###### number
 
-Width of the Gold HUD window.
+Width of the gold HUD window.
 
-##### Gold HUD Height
-###### number
+##### Windowskin
+###### file
 
-Height of the Gold HUD window.
+File image for the gold HUD windowskin. Must be placed in img/system.
 
 #### Plugin Commands
 
@@ -56,8 +56,11 @@ True/False (Show/Hide) to show/hide the Gold HUD window.
 
 ### Changelog
 
+* 1.1.0 - Sep 13, 2020
+  * Remove height parameter.
+  * Added option to change windowskin.
 * 1.0.0 - Aug 26, 2020
-	* Release.
+  * Release.
 
 ### Contributing
 

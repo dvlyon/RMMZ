@@ -10,15 +10,15 @@ Imported.DvLyon_HUD_Map = true;
 
 var DvLyon = DvLyon || {};
 DvLyon.HUDMap = DvLyon.HUDMap || {};
-DvLyon.HUDMap.version = 1;
+DvLyon.HUDMap.version = 1.1;
 
 /*:
 -------------------------------------------------------------------------------
 @target MZ
 @title DvLyon HUD Map
 @author DvLyon Games @ https://games.dvlyon.com
-@date Aug 26, 2020
-@version 1.0.0
+@date Sep 13, 2020
+@version 1.1.0
 @filename DvLyon_HUD_Map.js
 @url https://games.dvlyon.com
 
@@ -52,7 +52,7 @@ We want to keep growing and making your RMMZ experience better!
  *
  * @command showHUD
  * @text Map HUD Visibility
- * @desc Sets Map HUD visibility on/off.
+ * @desc Sets map HUD visibility on/off.
  *
  * @arg value
  * @type boolean
@@ -65,7 +65,7 @@ We want to keep growing and making your RMMZ experience better!
  *
  * @param Default
  * @text Map HUD Default Visibility
- * @desc Default visibility of the Map HUD. (Default: Show)
+ * @desc Default visibility of the map HUD. (Default: Show)
  * @type boolean
  * @on Show
  * @off Hide
@@ -73,27 +73,29 @@ We want to keep growing and making your RMMZ experience better!
  *
  * @param X
  * @text Map HUD X
- * @desc X position of the Map HUD.
+ * @desc X position of the map HUD.
  * @type number
  * @default 288
  *
  * @param Y
  * @text Map HUD Y
- * @desc Y position of the Map HUD.
+ * @desc Y position of the map HUD.
  * @type number
  * @default 0
   *
  * @param Width
  * @text Map HUD Width
- * @desc Width of the Map HUD.
+ * @desc Width of the map HUD.
  * @type number
  * @default 240
  *
- * @param Height
- * @text Map HUD Height
- * @desc Height of the Map HUD.
- * @type number
- * @default 60
+ * @param Window
+ * @text Windowskin
+ * @desc Windowskin for the map HUD.
+ * @type file
+ * @dir img/system/
+ * @require 1
+ * @default Window
  *
 */
 
@@ -101,7 +103,7 @@ We want to keep growing and making your RMMZ experience better!
 // Dependencies
 //=============================================================================
 
-if (Imported.DvLyon_HUD_Core && DvLyon.HUDCore && DvLyon.HUDCore.version >= 1) {
+if (Imported.DvLyon_HUD_Core && DvLyon.HUDCore && DvLyon.HUDCore.version >= 1.1) {
 
 //=============================================================================
 // Plugin Start
@@ -119,7 +121,7 @@ if (Imported.DvLyon_HUD_Core && DvLyon.HUDCore && DvLyon.HUDCore.version >= 1) {
 	DvLyon.HUDMap.X = toNumber(DvLyon.HUDMap.Parameters['X'], 288)
 	DvLyon.HUDMap.Y = toNumber(DvLyon.HUDMap.Parameters['Y'], 0)
 	DvLyon.HUDMap.Width = toNumber(DvLyon.HUDMap.Parameters['Width'], 240)
-	DvLyon.HUDMap.Height = toNumber(DvLyon.HUDMap.Parameters['Height'], 60)
+	DvLyon.HUDMap.Window = DvLyon.HUDMap.Parameters['Window']
 
 	//=============================================================================
 	// Managers
@@ -144,7 +146,7 @@ if (Imported.DvLyon_HUD_Core && DvLyon.HUDCore && DvLyon.HUDCore.version >= 1) {
 	}
 
 	Game_DvLyon.prototype.isMapHUDVisible = function() {
-		return this._showMapHUD
+		return !!this._showMapHUD && $gameMap.displayName()
 	}
 
 	Game_DvLyon.prototype.setMapHUDVisibility = function(value) {
@@ -201,8 +203,12 @@ if (Imported.DvLyon_HUD_Core && DvLyon.HUDCore && DvLyon.HUDCore.version >= 1) {
 		const x = DvLyon.HUDMap.X
 		const y = DvLyon.HUDMap.Y
 		const width = DvLyon.HUDMap.Width
-		const height = DvLyon.HUDMap.Height
+		const height = this.lineHeight() + 24
 		Window_DvLyonHUD.prototype.initialize.call(this, new Rectangle(x, y, width, height))
+	}
+
+	Window_DvLyonHUDMap.prototype.loadWindowskin = function() {
+		this.windowskin = ImageManager.loadSystem(DvLyon.HUDMap.Window)
 	}
 
 	Window_DvLyonHUDMap.prototype.refresh = function() {
