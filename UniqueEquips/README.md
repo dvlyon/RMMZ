@@ -16,6 +16,10 @@ This plugin is distributed under the following license:
 
 [Mozilla Public License Version 2.0](http://mozilla.org/MPL/2.0/ "Mozilla Public License Version 2.0")
 
+### Requirements
+
+#### [DvLyon Core](https://dvlyon.com/plugins/core)
+
 ### Usage
 
 Simply install and activate.
@@ -23,7 +27,7 @@ Simply install and activate.
 ### Changelog
 
 * 1.0.0 - Sep 03, 2020
-	* Release.
+  * Release.
 
 ### Contributing
 

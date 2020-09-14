@@ -16,6 +16,10 @@ This plugin is distributed under the following license:
 
 [Mozilla Public License Version 2.0](http://mozilla.org/MPL/2.0/ "Mozilla Public License Version 2.0")
 
+### Requirements
+
+#### [DvLyon HUD Core](https://dvlyon.com/plugins/hud)
+
 ### Usage
 
 Simply install, activate and configure parameters.
