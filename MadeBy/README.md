@@ -1,10 +1,10 @@
-# DvLyon Map HUD
+# DvLyon MadeBy
 
 ## DvLyon Games - RMMZ
 
 ### Description
 
-DvLyon_HUD_Map is a HUD module that simply shows the current map's display name.
+DvLyon_MadeBy adds a simple scene that showcases a set of images before game load.
 
 ### License
 
@@ -18,7 +18,7 @@ This plugin is distributed under the following license:
 
 ### Requirements
 
-#### [DvLyon HUD Core](https://dvlyon.com/plugins/hud)
+#### [DvLyon Core](https://dvlyon.com/plugins/core)
 
 ### Usage
 
@@ -26,44 +26,19 @@ Simply install, activate and configure parameters.
 
 #### Parameters
 
-##### Map HUD Default Visibility
-###### boolean
+##### Display Images
+###### file[]
 
-True/False (Show/Hide) to show/hide the map HUD window by default.
+List of images to be displayed before game load.
 
-##### Map HUD X
+##### Fade Speed
 ###### number
 
-X position of the map HUD window.
-
-##### Map HUD Y
-###### number
-
-Y position of the map HUD window.
-
-##### Map HUD Width
-###### number
-
-Width of the map HUD window.
-
-##### Windowskin
-###### file
-
-File image for the map HUD windowskin. Must be placed in img/system.
-
-#### Plugin Commands
-
-##### Map HUD Visibility
-###### Value: boolean
-
-True/False (Show/Hide) to show/hide the map HUD window.
+Fading speed for the displayed images.
 
 ### Changelog
 
-* 1.1.0 - Sep 13, 2020
-  * Remove height parameter.
-  * Added option to change windowskin.
-* 1.0.0 - Aug 26, 2020
+* 1.0.0 - Sep 16, 2020
   * Release.
 
 ### Contributing

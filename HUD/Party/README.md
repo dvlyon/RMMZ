@@ -1,10 +1,10 @@
-# DvLyon Map HUD
+# DvLyon Party HUD
 
 ## DvLyon Games - RMMZ
 
 ### Description
 
-DvLyon_HUD_Map is a HUD module that simply shows the current map's display name.
+DvLyon_HUD_Party is a HUD module that displays the party members' status.
 
 ### License
 
@@ -26,44 +26,51 @@ Simply install, activate and configure parameters.
 
 #### Parameters
 
-##### Map HUD Default Visibility
+##### Party HUD Default Visibility
 ###### boolean
 
 True/False (Show/Hide) to show/hide the map HUD window by default.
 
-##### Map HUD X
+##### Party HUD X
 ###### number
 
 X position of the map HUD window.
 
-##### Map HUD Y
+##### Party HUD Y
 ###### number
 
 Y position of the map HUD window.
 
-##### Map HUD Width
+##### Party HUD Actor Size
 ###### number
 
-Width of the map HUD window.
+Size (width & height) of the party HUD actor faces.
+
+##### Party HUD Bar Width
+###### number
+
+Width of the party HUD hp/mana gauges.
+
+##### Display Mana Bar
+###### boolean
+
+True/False (Yes/No) whether to display the party members' mana bar or not.
 
 ##### Windowskin
 ###### file
 
-File image for the map HUD windowskin. Must be placed in img/system.
+File image for the party HUD windowskin. Must be placed in img/system.
 
 #### Plugin Commands
 
-##### Map HUD Visibility
+##### Party HUD Visibility
 ###### Value: boolean
 
-True/False (Show/Hide) to show/hide the map HUD window.
+True/False (Show/Hide) to show/hide the party HUD window.
 
 ### Changelog
 
-* 1.1.0 - Sep 13, 2020
-  * Remove height parameter.
-  * Added option to change windowskin.
-* 1.0.0 - Aug 26, 2020
+* 1.0.0 - Sep 16, 2020
   * Release.
 
 ### Contributing

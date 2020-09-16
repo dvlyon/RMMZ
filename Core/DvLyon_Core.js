@@ -10,15 +10,15 @@ Imported.DvLyon_Core = true;
 
 var DvLyon = DvLyon || {};
 DvLyon.Core = DvLyon.Core || {};
-DvLyon.Core.version = 1.1;
+DvLyon.Core.version = 1.2;
 
 /*:
 -------------------------------------------------------------------------------
 @target MZ
 @title DvLyon Core
 @author DvLyon Games @ https://games.dvlyon.com
-@date Sep 13, 2020
-@version 1.1.0
+@date Sep 16, 2020
+@version 1.2.0
 @filename DvLyon_Core.js
 @url https://games.dvlyon.com
 
@@ -207,6 +207,52 @@ function Game_DvLyon() {
 		const sx = (faceIndex % 4) * sw
 		const sy = Math.floor(faceIndex / 4) * sh
 		this.contents.blt(bitmap, sx, sy, sw, sh, x, y, width, height)
+	}
+
+	Window_Base.prototype.drawActorFace = function(actor, x, y, width, height) {
+		this.drawFace(actor.faceName(), actor.faceIndex(), x, y, width, height)
+	}
+
+	Window_Base.prototype.drawGauge = function(x, y, width, height, color1, color2, rate) {
+		rate = Math.max(Math.min(rate, 1), 0)
+		const fillW = Math.floor(width * rate)
+		this.contents.fillRect(x, y, width, height, ColorManager.gaugeBackColor())
+		this.contents.gradientFillRect(x, y, fillW, height, color1, color2)
+	}
+
+	Window_Base.prototype.drawHPGauge = function(actor, x, y, width, height) {
+		const rate = actor.hpRate()
+		const color1 = ColorManager.hpGaugeColor1()
+		const color2 = ColorManager.hpGaugeColor2()
+		this.drawGauge(x, y, width, height, color1, color2, rate)
+	}
+
+	Window_Base.prototype.drawMPGauge = function(actor, x, y, width, height) {
+		const rate = actor.mpRate()
+		const color1 = ColorManager.mpGaugeColor1()
+		const color2 = ColorManager.mpGaugeColor2()
+		this.drawGauge(x, y, width, height, color1, color2, rate)
+	}
+
+	Window_Base.prototype.drawGaugeV = function(x, y, width, height, color1, color2, rate) {
+		rate = Math.max(Math.min(rate, 1), 0)
+		const fillH = height - Math.floor(height * rate)
+		this.contents.gradientFillRect(x, y, width, height, color1, color2)
+		this.contents.fillRect(x, y, width, fillH, ColorManager.gaugeBackColor())
+	}
+
+	Window_Base.prototype.drawHPGaugeV = function(actor, x, y, width, height) {
+		const rate = actor.hpRate()
+		const color1 = ColorManager.hpGaugeColor1()
+		const color2 = ColorManager.hpGaugeColor2()
+		this.drawGaugeV(x, y, width, height, color1, color2, rate)
+	}
+
+	Window_Base.prototype.drawMPGaugeV = function(actor, x, y, width, height) {
+		const rate = actor.mpRate()
+		const color1 = ColorManager.mpGaugeColor1()
+		const color2 = ColorManager.mpGaugeColor2()
+		this.drawGaugeV(x, y, width, height, color1, color2, rate)
 	}
 
 	Window_Base.prototype.drawBar = function(x, y, width, height, base, color, rate) {

@@ -1,3 +1,3 @@
-## DvLyon HUD Gold
+## DvLyon Gold HUD
 
-A HUD window to display the party's current gold amount.
+A HUD window to display the party's current currency amount.

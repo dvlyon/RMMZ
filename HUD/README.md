@@ -24,42 +24,10 @@ This plugin is distributed under the following license:
 
 Simply install and activate.
 
-### For Developers
-
-#### Classes
-
-##### Window_DvLyonHUD
-
-The superclass of all of our HUD windows. Clears the window and refreshes it's contents on update.
-
-#### Managers
-
-##### ImageManager.loadDvLyon(param0)
-###### param0: string
-
-Loads an image stored in the 'img/dvlyon/' folder.
-
-##### SceneManager.isCurrentScene(param0)
-###### param0: sceneClass
-
-Checks if the current scene is of the param0. Returns true/false.
-
-#### Windows
-
-##### Scene_Map.prototype.updateDvLyonHUDWindows
-
-Updates HUD windows. Called after update().
-
-##### Scene_Map.prototype.terminateDvLyonHUDWindows
-
-Hides HUD windows. Called before terminate().
-
-##### Scene_Map.prototype.createDvLyonHUDWindows
-
-Adds HUD windows. Called after createAllWindows().
-
 ### Changelog
 
+* 1.2.0 - Sep 16, 2020
+  * Updated DvLyon Core dependency to suit DvLyon Party HUD.
 * 1.1.0 - Sep 13, 2020
   * HUD windows now hide when a game message appears.
 * 1.0.0 - Aug 26, 2020

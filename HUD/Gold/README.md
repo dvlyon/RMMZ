@@ -1,10 +1,10 @@
-# DvLyon HUD Gold
+# DvLyon Gold HUD
 
 ## DvLyon Games - RMMZ
 
 ### Description
 
-DvLyon_HUD_Gold is a HUD module that simply shows the party's current amount of gold.
+DvLyon_HUD_Gold is a HUD module that simply shows the party's current currency amount.
 
 ### License
 
@@ -56,7 +56,7 @@ File image for the gold HUD windowskin. Must be placed in img/system.
 ##### Gold HUD Visibility
 ###### Value: boolean
 
-True/False (Show/Hide) to show/hide the Gold HUD window.
+True/False (Show/Hide) to show/hide the gold HUD window.
 
 ### Changelog
 

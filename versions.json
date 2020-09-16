@@ -1,62 +1,66 @@
 {
 	"core": {
-		"excerpt": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/Core/excerpt.md",
-		"filename": "DvLyon_Core",
+		"filename": "DvLyon_Core.js",
 		"name": "DvLyon Core",
 		"preview": "https://cdn.dvlyon.com/assets/games/plugins/default.png",
 		"priority": "normal",
-		"readme": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/Core/README.md",
-		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/Core/DvLyon_Core.js",
-		"version": 1.1
+		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/Core/",
+		"version": 1.2
 	},
 	"hud": {
-		"excerpt": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/excerpt.md",
-		"filename": "DvLyon_HUD_Core",
+		"filename": "DvLyon_HUD_Core.js",
 		"name": "DvLyon HUD Core",
 		"preview": "https://cdn.dvlyon.com/assets/games/plugins/hud.gif",
 		"priority": "normal",
-		"readme": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/README.md",
-		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/DvLyon_HUD_Core.js",
-		"version": 1.1
+		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/",
+		"version": 1.2
 	},
 	"hudleader": {
-		"excerpt": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Leader/excerpt.md",
-		"filename": "DvLyon_HUD_Leader",
-		"name": "DvLyon HUD Leader",
+		"filename": "DvLyon_HUD_Leader.js",
+		"name": "DvLyon Leader HUD",
 		"preview": "https://cdn.dvlyon.com/assets/games/plugins/hud.gif",
 		"priority": "normal",
-		"readme": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Leader/README.md",
-		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Leader/DvLyon_HUD_Leader.js",
+		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Leader/",
 		"version": 1.1
 	},
 	"hudmap": {
-		"excerpt": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Map/excerpt.md",
-		"filename": "DvLyon_HUD_Map",
-		"name": "DvLyon HUD Map",
+		"filename": "DvLyon_HUD_Map.js",
+		"name": "DvLyon Map HUD",
 		"preview": "https://cdn.dvlyon.com/assets/games/plugins/hud.gif",
 		"priority": "normal",
-		"readme": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Map/README.md",
-		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Map/DvLyon_HUD_Map.js",
+		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Map/",
 		"version": 1.1
 	},
 	"hudgold": {
-		"excerpt": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Gold/excerpt.md",
-		"filename": "DvLyon_HUD_Gold",
-		"name": "DvLyon HUD Gold",
+		"filename": "DvLyon_HUD_Gold.js",
+		"name": "DvLyon Gold HUD",
 		"preview": "https://cdn.dvlyon.com/assets/games/plugins/hud.gif",
 		"priority": "normal",
-		"readme": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Gold/README.md",
-		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Gold/DvLyon_HUD_Gold.js",
+		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Gold/",
 		"version": 1.1
 	},
 	"uniqueEquips": {
-		"excerpt": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/UniqueEquips/excerpt.md",
-		"filename": "DvLyon_UniqueEquips",
+		"filename": "DvLyon_UniqueEquips.js",
 		"name": "DvLyon Unique Equips",
 		"preview": "https://cdn.dvlyon.com/assets/games/plugins/default.png",
-		"priority": "normal",
-		"readme": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/UniqueEquips/README.md",
-		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/UniqueEquips/DvLyon_UniqueEquips.js",
+		"priority": "new",
+		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/UniqueEquips/",
+		"version": 1
+	},
+	"hudParty": {
+		"filename": "DvLyon_HUD_Party.js",
+		"name": "DvLyon Party HUD",
+		"preview": "https://cdn.dvlyon.com/assets/games/plugins/partyhud.gif",
+		"priority": "new",
+		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Party/",
+		"version": 1
+	},
+	"madeBy": {
+		"filename": "DvLyon_MadeBy.js",
+		"name": "DvLyon MadeBy Scene",
+		"preview": "https://cdn.dvlyon.com/assets/games/plugins/madeby.gif",
+		"priority": "new",
+		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/MadeBy/",
 		"version": 1
 	}
 }

@@ -1,10 +1,10 @@
-# DvLyon HUD Leader
+# DvLyon Leader HUD
 
 ## DvLyon Games - RMMZ
 
 ### Description
 
-DvLyon_HUD_Leader is a HUD module that displays the current leader's health with custom bar images.
+DvLyon_HUD_Leader is a HUD module that displays the current leader's health and mana using custom bar images.
 
 ### License
 
@@ -89,7 +89,7 @@ File image for the leader HUD windowskin. Must be placed in img/system.
 ##### Leader HUD Visibility
 ###### Value: boolean
 
-True/False (Show/Hide) to show/hide the Leader HUD window.
+True/False (Show/Hide) to show/hide the leader HUD window.
 
 ### Changelog
 
