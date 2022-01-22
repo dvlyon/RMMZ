@@ -1,6 +1,6 @@
-# DvLyon Games - RMMZ
+# DvLyon - RMMZ
 
-Welcome to [DvLyon Games](https://games.dvlyon.com)' collection of free-to-use plugins for RPG Maker MZ.
+Welcome to [DvLyon](https://dvlyon.com)' collection of free-to-use plugins for RPG Maker MZ.
 
 ## License
 
@@ -14,10 +14,8 @@ All plugins distributed here must abide to the following license, unless explici
 
 ## Contributing
 
-If you could credit [DvLyon](https://dvlyon.com) and [DvLyon Games](https://games.dvlyon.com) in your games, we'd really appreciate it!
-
-We want to keep growing and making your RMMZ experience better!
+If you could credit [DvLyon](https://dvlyon.com) in your games, I'd really appreciate it!
 
 ## Contacting
 
-Multiple ways of reaching us are available at [DvLyon Games](https://games.dvlyon.com).
+Multiple ways of reaching me are available at [DvLyon](https://dvlyon.com).
