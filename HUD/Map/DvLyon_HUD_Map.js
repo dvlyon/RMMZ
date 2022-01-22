@@ -1,7 +1,7 @@
 "use strict";
 
 //=============================================================================
-// DvLyon Games
+// DvLyon
 // RPG Maker MZ - DvLyon_HUD_Map.js
 //=============================================================================
 
@@ -16,15 +16,15 @@ DvLyon.HUDMap.version = 1.1;
 -------------------------------------------------------------------------------
 @target MZ
 @title DvLyon HUD Map
-@author DvLyon Games @ https://games.dvlyon.com
+@author DvLyon @ https://dvlyon.com
 @date Sep 13, 2020
 @version 1.1.0
 @filename DvLyon_HUD_Map.js
-@url https://games.dvlyon.com
+@url https://dvlyon.com
 
 Contact:
 
-* Website: https://games.dvlyon.com
+* Website: https://dvlyon.com
 * Twitter: https://twitter.com/DvLyon
 
 -------------------------------------------------------------------------------
@@ -33,7 +33,7 @@ Contact:
 -------------------------------------------------------------------------------
 == Description ==
 
-Visit https://games.dvlyon.com/plugins/hudmap
+Visit https://dvlyon.com/plugins/hudmap
 
 == License ==
 
@@ -43,7 +43,7 @@ Visit https://games.dvlyon.com/plugins/hudmap
 
 == Contributing ==
 
-If you could credit DvLyon and https://games.dvlyon.com, we'd really
+If you could credit DvLyon and https://dvlyon.com, we'd really
 appreciate it!
 
 We want to keep growing and making your RMMZ experience better!
@@ -239,7 +239,7 @@ function versionChecker() {
 	})
 	.then(function(body) {
 		if (body && body.hudmap && (body.hudmap.version > DvLyon.HUDMap.version)) {
-			const text = 'An updated version of DvLyon_HUD_Map is available at https://games.dvlyon.com/plugins/hudmap'
+			const text = 'An updated version of DvLyon_HUD_Map is available at https://dvlyon.com/plugins/hudmap'
 			console.info(text)
 		}
 	})

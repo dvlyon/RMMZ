@@ -1,7 +1,7 @@
 "use strict";
 
 //=============================================================================
-// DvLyon Games
+// DvLyon
 // RPG Maker MZ - DvLyon_HUD_Core.js
 //=============================================================================
 
@@ -16,15 +16,15 @@ DvLyon.HUDCore.version = 1.2;
 -------------------------------------------------------------------------------
 @target MZ
 @title DvLyon HUD Core
-@author DvLyon Games @ https://games.dvlyon.com
+@author DvLyon @ https://dvlyon.com
 @date Sep 16, 2020
 @version 1.2.0
 @filename DvLyon_HUD_Core.js
-@url https://games.dvlyon.com
+@url https://dvlyon.com
 
 Contact:
 
-* Website: https://games.dvlyon.com
+* Website: https://dvlyon.com
 * Twitter: https://twitter.com/DvLyon
 
 -------------------------------------------------------------------------------
@@ -33,7 +33,7 @@ Contact:
 -------------------------------------------------------------------------------
 == Description ==
 
-Visit https://games.dvlyon.com/plugins/hud
+Visit https://dvlyon.com/plugins/hud
 
 == License ==
 
@@ -43,7 +43,7 @@ Visit https://games.dvlyon.com/plugins/hud
 
 == Contributing ==
 
-If you could credit DvLyon and https://games.dvlyon.com, we'd really
+If you could credit DvLyon and https://dvlyon.com, we'd really
 appreciate it!
 
 We want to keep growing and making your RMMZ experience better!
@@ -161,7 +161,7 @@ function versionChecker() {
 	})
 	.then(function(body) {
 		if (body && body.hud && (body.hud.version > DvLyon.HUDCore.version)) {
-			const text = 'An updated version of DvLyon_HUD_Core is available at https://games.dvlyon.com/plugins/hud'
+			const text = 'An updated version of DvLyon_HUD_Core is available at https://dvlyon.com/plugins/hud'
 			console.info(text)
 		}
 	})

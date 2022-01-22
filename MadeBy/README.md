@@ -1,6 +1,6 @@
 # DvLyon MadeBy
 
-## DvLyon Games - RMMZ
+## DvLyon - RMMZ
 
 ### Description
 
@@ -43,10 +43,10 @@ Fading speed for the displayed images.
 
 ### Contributing
 
-If you could credit [DvLyon](https://dvlyon.com) and [DvLyon Games](https://games.dvlyon.com) in your games, we'd really appreciate it!
+If you could credit [DvLyon](https://dvlyon.com) and [DvLyon](https://dvlyon.com) in your games, we'd really appreciate it!
 
 We want to keep growing and making your RMMZ experience better!
 
 ### Contacting
 
-Multiple ways of reaching us are available at [DvLyon Games](https://games.dvlyon.com).
+Multiple ways of reaching us are available at [DvLyon](https://dvlyon.com).

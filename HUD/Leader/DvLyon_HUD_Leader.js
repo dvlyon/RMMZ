@@ -1,7 +1,7 @@
 "use strict";
 
 //=============================================================================
-// DvLyon Games
+// DvLyon
 // RPG Maker MZ - DvLyon_HUD_Leader.js
 //=============================================================================
 
@@ -16,15 +16,15 @@ DvLyon.HUDLeader.version = 1.1;
 -------------------------------------------------------------------------------
 @target MZ
 @title DvLyon HUD Leader
-@author DvLyon Games @ https://games.dvlyon.com
+@author DvLyon @ https://dvlyon.com
 @date Sep 13, 2020
 @version 1.1.0
 @filename DvLyon_HUD_Leader.js
-@url https://games.dvlyon.com
+@url https://dvlyon.com
 
 Contact:
 
-* Website: https://games.dvlyon.com
+* Website: https://dvlyon.com
 * Twitter: https://twitter.com/DvLyon
 
 -------------------------------------------------------------------------------
@@ -33,7 +33,7 @@ Contact:
 -------------------------------------------------------------------------------
 == Description ==
 
-Visit https://games.dvlyon.com/plugins/hudleader
+Visit https://dvlyon.com/plugins/hudleader
 
 == License ==
 
@@ -43,7 +43,7 @@ Visit https://games.dvlyon.com/plugins/hudleader
 
 == Contributing ==
 
-If you could credit DvLyon and https://games.dvlyon.com, we'd really
+If you could credit DvLyon and https://dvlyon.com, we'd really
 appreciate it!
 
 We want to keep growing and making your RMMZ experience better!
@@ -300,7 +300,7 @@ function versionChecker() {
 	})
 	.then(function(body) {
 		if (body && body.hudleader && (body.hudleader.version > DvLyon.HUDLeader.version)) {
-			const text = 'An updated version of DvLyon_HUD_Leader is available at https://games.dvlyon.com/plugins/hudleader'
+			const text = 'An updated version of DvLyon_HUD_Leader is available at https://dvlyon.com/plugins/hudleader'
 			console.info(text)
 		}
 	})

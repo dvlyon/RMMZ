@@ -1,7 +1,7 @@
 "use strict";
 
 //=============================================================================
-// DvLyon Games
+// DvLyon
 // RPG Maker MZ - DvLyon_MadeBy.js
 //=============================================================================
 
@@ -16,15 +16,15 @@ DvLyon.MadeBy.version = 1;
 -------------------------------------------------------------------------------
 @target MZ
 @title DvLyon MadeBy
-@author DvLyon Games @ https://games.dvlyon.com
+@author DvLyon @ https://dvlyon.com
 @date Sep 16, 2020
 @version 1.0.0
 @filename DvLyon_MadeBy.js
-@url https://games.dvlyon.com
+@url https://dvlyon.com
 
 Contact:
 
-* Website: https://games.dvlyon.com
+* Website: https://dvlyon.com
 * Twitter: https://twitter.com/DvLyon
 
 -------------------------------------------------------------------------------
@@ -33,7 +33,7 @@ Contact:
 -------------------------------------------------------------------------------
 == Description ==
 
-Visit https://games.dvlyon.com/plugins/madeBy
+Visit https://dvlyon.com/plugins/madeBy
 
 == License ==
 
@@ -43,7 +43,7 @@ Visit https://games.dvlyon.com/plugins/madeBy
 
 == Contributing ==
 
-If you could credit DvLyon and https://games.dvlyon.com, we'd really
+If you could credit DvLyon and https://dvlyon.com, we'd really
 appreciate it!
 
 We want to keep growing and making your RMMZ experience better!
@@ -121,7 +121,7 @@ if (Imported.DvLyon_Core && DvLyon.Core && DvLyon.Core.version >= 1.2) {
 	//-----------------------------------------------------------------------------
 	// Scene_DvLyonMadeBy
 	//
-	// The scene class for showing the DvLyon Games' MadeBy splash screen.
+	// The scene class for showing the DvLyon' MadeBy splash screen.
 
 	function Scene_DvLyonMadeBy() {
 		this.initialize(...arguments)
@@ -210,7 +210,7 @@ function versionChecker() {
 	})
 	.then(body => {
 		if (body && body.madeBy && (body.madeBy.version > DvLyon.MadeBy.version)) {
-			const text = 'An updated version of DvLyon_MadeBy is available at https://games.dvlyon.com/plugins/madeBy'
+			const text = 'An updated version of DvLyon_MadeBy is available at https://dvlyon.com/plugins/madeBy'
 			console.info(text)
 		}
 	})
