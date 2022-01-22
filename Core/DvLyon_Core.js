@@ -1,7 +1,7 @@
 "use strict";
 
 //=============================================================================
-// DvLyon Games
+// DvLyon
 // RPG Maker MZ - DvLyon_Core.js
 //=============================================================================
 
@@ -16,15 +16,15 @@ DvLyon.Core.version = 1.2;
 -------------------------------------------------------------------------------
 @target MZ
 @title DvLyon Core
-@author DvLyon Games @ https://games.dvlyon.com
+@author DvLyon @ https://dvlyon.com
 @date Sep 16, 2020
 @version 1.2.0
 @filename DvLyon_Core.js
-@url https://games.dvlyon.com
+@url https://dvlyon.com
 
 Contact:
 
-* Website: https://games.dvlyon.com
+* Website: https://dvlyon.com
 * Twitter: https://twitter.com/DvLyon
 
 -------------------------------------------------------------------------------
@@ -33,7 +33,7 @@ Contact:
 -------------------------------------------------------------------------------
 == Description ==
 
-Visit https://games.dvlyon.com/plugins/core
+Visit https://dvlyon.com/plugins/core
 
 == License ==
 
@@ -43,7 +43,7 @@ Visit https://games.dvlyon.com/plugins/core
 
 == Contributing ==
 
-If you could credit DvLyon and https://games.dvlyon.com, we'd really
+If you could credit DvLyon and https://dvlyon.com, we'd really
 appreciate it!
 
 We want to keep growing and making your RMMZ experience better!
@@ -301,7 +301,7 @@ function versionChecker() {
 	})
 	.then(function(body) {
 		if (body && body.core && (body.core.version > DvLyon.Core.version)) {
-			const text = 'An updated version of DvLyon_Core is available at https://games.dvlyon.com/plugins/core'
+			const text = 'An updated version of DvLyon_Core is available at https://dvlyon.com/plugins/core'
 			console.info(text)
 		}
 	})

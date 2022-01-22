@@ -2,7 +2,7 @@
 	"core": {
 		"filename": "DvLyon_Core.js",
 		"name": "DvLyon Core",
-		"preview": "https://cdn.dvlyon.com/assets/games/plugins/default.png",
+		"preview": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/assets/default.png",
 		"priority": "normal",
 		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/Core/",
 		"version": 1.2
@@ -10,7 +10,7 @@
 	"hud": {
 		"filename": "DvLyon_HUD_Core.js",
 		"name": "DvLyon HUD Core",
-		"preview": "https://cdn.dvlyon.com/assets/games/plugins/hud.gif",
+		"preview": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/assets/hud.gif",
 		"priority": "normal",
 		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/",
 		"version": 1.2
@@ -18,7 +18,7 @@
 	"hudleader": {
 		"filename": "DvLyon_HUD_Leader.js",
 		"name": "DvLyon Leader HUD",
-		"preview": "https://cdn.dvlyon.com/assets/games/plugins/hud.gif",
+		"preview": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/assets/hud.gif",
 		"priority": "normal",
 		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Leader/",
 		"version": 1.1
@@ -26,7 +26,7 @@
 	"hudmap": {
 		"filename": "DvLyon_HUD_Map.js",
 		"name": "DvLyon Map HUD",
-		"preview": "https://cdn.dvlyon.com/assets/games/plugins/hud.gif",
+		"preview": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/assets/hud.gif",
 		"priority": "normal",
 		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Map/",
 		"version": 1.1
@@ -34,7 +34,7 @@
 	"hudgold": {
 		"filename": "DvLyon_HUD_Gold.js",
 		"name": "DvLyon Gold HUD",
-		"preview": "https://cdn.dvlyon.com/assets/games/plugins/hud.gif",
+		"preview": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/assets/hud.gif",
 		"priority": "normal",
 		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Gold/",
 		"version": 1.1
@@ -42,7 +42,7 @@
 	"uniqueEquips": {
 		"filename": "DvLyon_UniqueEquips.js",
 		"name": "DvLyon Unique Equips",
-		"preview": "https://cdn.dvlyon.com/assets/games/plugins/default.png",
+		"preview": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/assets/default.png",
 		"priority": "new",
 		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/UniqueEquips/",
 		"version": 1
@@ -50,7 +50,7 @@
 	"hudParty": {
 		"filename": "DvLyon_HUD_Party.js",
 		"name": "DvLyon Party HUD",
-		"preview": "https://cdn.dvlyon.com/assets/games/plugins/partyhud.gif",
+		"preview": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/assets/partyhud.gif",
 		"priority": "new",
 		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/HUD/Party/",
 		"version": 1
@@ -58,7 +58,7 @@
 	"madeBy": {
 		"filename": "DvLyon_MadeBy.js",
 		"name": "DvLyon MadeBy Scene",
-		"preview": "https://cdn.dvlyon.com/assets/games/plugins/madeby.gif",
+		"preview": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/assets/madeby.gif",
 		"priority": "new",
 		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/master/MadeBy/",
 		"version": 1
