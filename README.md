@@ -1,6 +1,6 @@
 # DvLyon - RMMZ
 
-Welcome to [DvLyon](https://dvlyon.com)' collection of free-to-use plugins for RPG Maker MZ.
+Welcome to [DvLyon](https://dvlyon.com)'s collection of free-to-use plugins for RPG Maker MZ.
 
 ## License
 

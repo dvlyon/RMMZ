@@ -27,10 +27,8 @@ Visit https://dvlyon.com/plugins/core
 
 == Contributing ==
 
-If you could credit DvLyon and https://dvlyon.com, we'd really
+If you could credit DvLyon and https://dvlyon.com, I'd really
 appreciate it!
-
-We want to keep growing and making your RMMZ experience better!
 
 @param SkipTitle
 @text Skip Title If No Save

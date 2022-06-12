@@ -4,7 +4,7 @@
 
 ### Description
 
-DvLyon_Core is the core of all plugin functionality for the [DvLyon](https://dvlyon.com)' collection of RPG Maker MZ plugins. It is required by all of our plugins, and comes with some nifty extra functions specially tailored for game development.
+DvLyon_Core is the core of all plugin functionality for the [DvLyon](https://dvlyon.com) collection of RPG Maker MZ plugins. It is required by all of our plugins, and comes with some nifty extra functions specially tailored for game development.
 
 ### License
 
@@ -34,6 +34,8 @@ If active, opens the development tools on game load, also on refresh. Meant for 
 
 ### Changelog
 
+* 2.0.0 - Jun 22
+  * Project cleanup.
 * 1.2.0 - Sep 16, 2020
   * Added drawActorFace and drawGauge methods to all windows.
 * 1.1.0 - Sep 13, 2020
@@ -43,10 +45,8 @@ If active, opens the development tools on game load, also on refresh. Meant for 
 
 ### Contributing
 
-If you could credit [DvLyon](https://dvlyon.com) and [DvLyon](https://dvlyon.com) in your games, we'd really appreciate it!
-
-We want to keep growing and making your RMMZ experience better!
+If you could credit [DvLyon](https://dvlyon.com) in your games, I'd really appreciate it!
 
 ### Contacting
 
-Multiple ways of reaching us are available at [DvLyon](https://dvlyon.com).
+Multiple ways of reaching me are available at [DvLyon](https://dvlyon.com).

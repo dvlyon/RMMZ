@@ -70,15 +70,15 @@ True/False (Show/Hide) to show/hide the party HUD window.
 
 ### Changelog
 
+* 2.0.0 - Jun 22
+  * Project cleanup.
 * 1.0.0 - Sep 16, 2020
   * Release.
 
 ### Contributing
 
-If you could credit [DvLyon](https://dvlyon.com) and [DvLyon](https://dvlyon.com) in your games, we'd really appreciate it!
-
-We want to keep growing and making your RMMZ experience better!
+If you could credit [DvLyon](https://dvlyon.com) in your games, I'd really appreciate it!
 
 ### Contacting
 
-Multiple ways of reaching us are available at [DvLyon](https://dvlyon.com).
+Multiple ways of reaching me are available at [DvLyon](https://dvlyon.com).
