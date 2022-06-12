@@ -5,35 +5,21 @@
 // RPG Maker MZ - DvLyon_HUD_Core.js
 //=============================================================================
 
-var Imported = Imported || {};
-Imported.DvLyon_HUD_Core = true;
-
 var DvLyon = DvLyon || {};
 DvLyon.HUDCore = DvLyon.HUDCore || {};
-DvLyon.HUDCore.version = 1.2;
+DvLyon.HUDCore.version = 2;
 
 /*:
--------------------------------------------------------------------------------
 @target MZ
-@title DvLyon HUD Core
-@author DvLyon @ https://dvlyon.com
-@date Sep 16, 2020
-@version 1.2.0
-@filename DvLyon_HUD_Core.js
+@base DvLyon_Core
+@orderAfter DvLyon_Core
+@plugindesc HUD Core Functions
+@author DvLyon
 @url https://dvlyon.com
-
-Contact:
-
-* Website: https://dvlyon.com
-* Twitter: https://twitter.com/DvLyon
-
--------------------------------------------------------------------------------
-@plugindesc DvLyon's HUD Core
 @help 
--------------------------------------------------------------------------------
 == Description ==
 
-Visit https://dvlyon.com/plugins/hud
+Visit https://dvlyon.com/plugins/hudCore
 
 == License ==
 
@@ -47,9 +33,6 @@ If you could credit DvLyon and https://dvlyon.com, we'd really
 appreciate it!
 
 We want to keep growing and making your RMMZ experience better!
-
--------------------------------------------------------------------------------
- *
 */
 
 //=============================================================================
@@ -59,12 +42,6 @@ We want to keep growing and making your RMMZ experience better!
 function Window_DvLyonHUD() {
 	this.initialize(...arguments)
 }
-
-//=============================================================================
-// Dependencies
-//=============================================================================
-
-if (Imported.DvLyon_Core && DvLyon.Core && DvLyon.Core.version >= 1.2) {
 
 //=============================================================================
 // Plugin Start
@@ -143,25 +120,19 @@ if (Imported.DvLyon_Core && DvLyon.Core && DvLyon.Core.version >= 1.2) {
 // Plugin End
 //=============================================================================
 
-} else {
-	const error = 'DvLyon_HUD_Core requires DvLyon_Core at the latest version to run.'
-	console.error(error)
-	require('nw.gui').Window.get().showDevTools()
-}
-
 //=============================================================================
 // Version Checker
 //=============================================================================
 
 function versionChecker() {
-	const url = 'https://raw.githubusercontent.com/dvlyon/RMMZ/master/versions.json'
+	const url = 'https://raw.githubusercontent.com/dvlyon/RMMZ/main/versions.json'
 	fetch(url)
 	.then(res => {
 		return res.json()
 	})
 	.then(function(body) {
-		if (body && body.hud && (body.hud.version > DvLyon.HUDCore.version)) {
-			const text = 'An updated version of DvLyon_HUD_Core is available at https://dvlyon.com/plugins/hud'
+		if (body && body.hudCore && (body.hudCore.version > DvLyon.HUDCore.version)) {
+			const text = 'An updated version of DvLyon_HUD_Core is available at https://dvlyon.com/plugins/hudCore'
 			console.info(text)
 		}
 	})

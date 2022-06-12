@@ -56,28 +56,28 @@ True/False (Yes/No) whether to display the leader's mana bar or not.
 
 File image of the background bar. Must be placed in img/dvlyon. A sample file is provided:
 
-![bar](https://github.com/dvlyon/RMMZ/raw/master/HUD/Leader/Assets/bar.png)
+![bar](https://github.com/dvlyon/RMMZ/raw/main/GameMap/HUD/Leader/Assets/bar.png)
 
 ##### Filled Health Bar
 ###### file
 
 File image of the filling bar. Must be placed in img/dvlyon. A sample file is provided:
 
-![barFill](https://github.com/dvlyon/RMMZ/raw/master/HUD/Leader/Assets/barFill.png)
+![barFill](https://github.com/dvlyon/RMMZ/raw/main/GameMap/HUD/Leader/Assets/barFill.png)
 
 ##### Background Mana Bar
 ###### file
 
 File image of the background mana bar. Must be placed in img/dvlyon. A sample file is provided:
 
-![bar](https://github.com/dvlyon/RMMZ/raw/master/HUD/Leader/Assets/bar.png)
+![bar](https://github.com/dvlyon/RMMZ/raw/main/GameMap/HUD/Leader/Assets/bar.png)
 
 ##### Filled Mana Bar
 ###### file
 
 File image of the filling mana bar. Must be placed in img/dvlyon. A sample file is provided:
 
-![barFill](https://github.com/dvlyon/RMMZ/raw/master/HUD/Leader/Assets/manaBarFill.png)
+![barFill](https://github.com/dvlyon/RMMZ/raw/main/GameMap/HUD/Leader/Assets/manaBarFill.png)
 
 ##### Windowskin
 ###### file

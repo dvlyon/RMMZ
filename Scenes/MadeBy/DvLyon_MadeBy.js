@@ -5,32 +5,18 @@
 // RPG Maker MZ - DvLyon_MadeBy.js
 //=============================================================================
 
-var Imported = Imported || {};
-Imported.DvLyon_MadeBy = true;
-
 var DvLyon = DvLyon || {};
 DvLyon.MadeBy = DvLyon.MadeBy || {};
-DvLyon.MadeBy.version = 1;
+DvLyon.MadeBy.version = 2;
 
 /*:
--------------------------------------------------------------------------------
 @target MZ
-@title DvLyon MadeBy
-@author DvLyon @ https://dvlyon.com
-@date Sep 16, 2020
-@version 1.0.0
-@filename DvLyon_MadeBy.js
+@base DvLyon_Core
+@orderAfter DvLyon_Core
+@plugindesc MadeBy Scene
+@author DvLyon
 @url https://dvlyon.com
-
-Contact:
-
-* Website: https://dvlyon.com
-* Twitter: https://twitter.com/DvLyon
-
--------------------------------------------------------------------------------
-@plugindesc DvLyon's MadeBy Scene
-@help 
--------------------------------------------------------------------------------
+@help
 == Description ==
 
 Visit https://dvlyon.com/plugins/madeBy
@@ -48,29 +34,20 @@ appreciate it!
 
 We want to keep growing and making your RMMZ experience better!
 
--------------------------------------------------------------------------------
- *
- * @param Images
- * @text Display Images
- * @desc List of images to be displayed before game load.
- * @type file[]
- * @dir img/dvlyon/
- * @require 1
- * @default []
- *
- * @param FadeSpeed
- * @text Fade Speed
- * @desc Fading speed for the displayed images. (Default: 48).
- * @type number
- * @default 48
- *
+@param Images
+@text Display Images
+@desc List of images to be displayed before game load.
+@type file[]
+@dir img/dvlyon/
+@require 1
+@default []
+
+@param FadeSpeed
+@text Fade Speed
+@desc Fading speed for the displayed images. (Default: 48).
+@type number
+@default 48
 */
-
-//=============================================================================
-// Dependencies
-//=============================================================================
-
-if (Imported.DvLyon_Core && DvLyon.Core && DvLyon.Core.version >= 1.2) {
 
 //=============================================================================
 // Plugin Start
@@ -192,18 +169,12 @@ if (Imported.DvLyon_Core && DvLyon.Core && DvLyon.Core.version >= 1.2) {
 // Plugin End
 //=============================================================================
 
-} else {
-	var text = 'DvLyon_MadeBy requires DvLyon_Core at the latest version to run.'
-	console.error(text)
-	require('nw.gui').Window.get().showDevTools()
-}
-
 //=============================================================================
 // Version Checker
 //=============================================================================
 
 function versionChecker() {
-	const url = 'https://raw.githubusercontent.com/dvlyon/RMMZ/master/versions.json'
+	const url = 'https://raw.githubusercontent.com/dvlyon/RMMZ/main/versions.json'
 	fetch(url)
 	.then(res => {
 		return res.json()

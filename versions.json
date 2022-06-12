@@ -1,66 +1,51 @@
 {
 	"core": {
 		"filename": "DvLyon_Core.js",
-		"name": "DvLyon Core",
-		"preview": "https://github.com/dvlyon/RMMZ/blob/main/assets/default.png?raw=true",
-		"priority": "normal",
-		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/main/Core/",
-		"version": 1.2
+		"name": "Core Functions",
+		"priority": "high",
+		"url": "Utils/Core/",
+		"version": 2
 	},
-	"hud": {
+    "madeBy": {
+		"filename": "DvLyon_MadeBy.js",
+		"name": "MadeBy Scene",
+		"priority": "normal",
+		"url": "Scenes/MadeBy/",
+		"version": 2
+	},
+	"hudCore": {
 		"filename": "DvLyon_HUD_Core.js",
-		"name": "DvLyon HUD Core",
-		"preview": "https://github.com/dvlyon/RMMZ/blob/main/assets/hud.gif?raw=true",
+		"name": "HUD Core Functions",
 		"priority": "normal",
-		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/main/HUD/",
-		"version": 1.2
+		"url": "GameMap/HUD/Core/",
+		"version": 2
 	},
-	"hudleader": {
+	"hudLeader": {
 		"filename": "DvLyon_HUD_Leader.js",
-		"name": "DvLyon Leader HUD",
-		"preview": "https://github.com/dvlyon/RMMZ/blob/main/assets/hud.gif?raw=true",
+		"name": "Party Leader HUD",
 		"priority": "normal",
-		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/main/HUD/Leader/",
-		"version": 1.1
+		"url": "GameMap/HUD/Leader/",
+		"version": 2
 	},
-	"hudmap": {
+	"hudMap": {
 		"filename": "DvLyon_HUD_Map.js",
-		"name": "DvLyon Map HUD",
-		"preview": "https://github.com/dvlyon/RMMZ/blob/main/assets/hud.gif?raw=true",
+		"name": "Map Name HUD",
 		"priority": "normal",
-		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/main/HUD/Map/",
-		"version": 1.1
+		"url": "GameMap/HUD/Map/",
+		"version": 2
 	},
-	"hudgold": {
+	"hudGold": {
 		"filename": "DvLyon_HUD_Gold.js",
-		"name": "DvLyon Gold HUD",
-		"preview": "https://github.com/dvlyon/RMMZ/blob/main/assets/hud.gif?raw=true",
+		"name": "Currency HUD",
 		"priority": "normal",
-		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/main/HUD/Gold/",
-		"version": 1.1
-	},
-	"uniqueEquips": {
-		"filename": "DvLyon_UniqueEquips.js",
-		"name": "DvLyon Unique Equips",
-		"preview": "https://github.com/dvlyon/RMMZ/blob/main/assets/default.png?raw=true",
-		"priority": "new",
-		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/main/UniqueEquips/",
-		"version": 1
+		"url": "GameMap/HUD/Gold/",
+		"version": 2
 	},
 	"hudParty": {
 		"filename": "DvLyon_HUD_Party.js",
-		"name": "DvLyon Party HUD",
-		"preview": "https://github.com/dvlyon/RMMZ/blob/main/assets/partyhud.gif?raw=true",
-		"priority": "new",
-		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/main/HUD/Party/",
-		"version": 1
-	},
-	"madeBy": {
-		"filename": "DvLyon_MadeBy.js",
-		"name": "DvLyon MadeBy Scene",
-		"preview": "https://github.com/dvlyon/RMMZ/blob/main/assets/madeby.gif?raw=true",
-		"priority": "new",
-		"url": "https://raw.githubusercontent.com/dvlyon/RMMZ/main/MadeBy/",
-		"version": 1
+		"name": "Party HUD",
+		"priority": "normal",
+		"url": "GameMap/HUD/Party/",
+		"version": 2
 	}
 }

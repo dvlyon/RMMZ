@@ -5,35 +5,21 @@
 // RPG Maker MZ - DvLyon_HUD_Gold.js
 //=============================================================================
 
-var Imported = Imported || {};
-Imported.DvLyon_HUD_Gold = true;
-
 var DvLyon = DvLyon || {};
 DvLyon.HUDGold = DvLyon.HUDGold || {};
-DvLyon.HUDGold.version = 1.1;
+DvLyon.HUDGold.version = 2;
 
 /*:
--------------------------------------------------------------------------------
 @target MZ
-@title DvLyon HUD Gold
-@author DvLyon @ https://dvlyon.com
-@date Sep 13, 2020
-@version 1.1.0
-@filename DvLyon_HUD_Gold.js
+@base DvLyon_HUD_Core
+@orderAfter DvLyon_HUD_Core
+@plugindesc Currency HUD
+@author DvLyon
 @url https://dvlyon.com
-
-Contact:
-
-* Website: https://dvlyon.com
-* Twitter: https://twitter.com/DvLyon
-
--------------------------------------------------------------------------------
-@plugindesc DvLyon's Gold HUD
-@help 
--------------------------------------------------------------------------------
+@help
 == Description ==
 
-Visit https://dvlyon.com/plugins/hudgold
+Visit https://dvlyon.com/plugins/hudGold
 
 == License ==
 
@@ -48,62 +34,52 @@ appreciate it!
 
 We want to keep growing and making your RMMZ experience better!
 
--------------------------------------------------------------------------------
- *
- * @command showHUD
- * @text Gold HUD Visibility
- * @desc Sets gold HUD visibility on/off.
- *
- * @arg value
- * @type boolean
- * @text Value
- * @desc Gold HUD visibility on/off.
- * @on Show
- * @off Hide
- *
- *
- *
- * @param Default
- * @text Gold HUD Default Visibility
- * @desc Default visibility of the gold HUD. (Default: Show)
- * @type boolean
- * @on Show
- * @off Hide
- * @default true
- *
- * @param X
- * @text Gold HUD X
- * @desc X position of the gold HUD.
- * @type number
- * @default 576
- *
- * @param Y
- * @text Gold HUD Y
- * @desc Y position of the gold HUD.
- * @type number
- * @default 564
-  *
- * @param Width
- * @text Gold HUD Width
- * @desc Width of the gold HUD.
- * @type number
- * @default 240
- *
- * @param Window
- * @text Windowskin
- * @desc Windowskin for the gold HUD.
- * @type file
- * @dir img/system/
- * @require 1
- * @default Window
- *
+@command showHUD
+@text Gold HUD Visibility
+@desc Sets gold HUD visibility on/off.
+
+@arg value
+@type boolean
+@text Value
+@desc Gold HUD visibility on/off.
+@on Show
+@off Hide
+
+
+@param Default
+@text Gold HUD Default Visibility
+@desc Default visibility of the gold HUD. (Default: Show)
+@type boolean
+@on Show
+@off Hide
+@default true
+
+@param X
+@text Gold HUD X
+@desc X position of the gold HUD.
+@type number
+@default 576
+
+@param Y
+@text Gold HUD Y
+@desc Y position of the gold HUD.
+@type number
+@default 564
+
+@param Width
+@text Gold HUD Width
+@desc Width of the gold HUD.
+@type number
+@default 240
+
+@param Window
+@text Windowskin
+@desc Windowskin for the gold HUD.
+@type file
+@dir img/system/
+@require 1
+@default Window
 */
-
-//=============================================================================
-// Dependencies
-//=============================================================================
-
-if (Imported.DvLyon_HUD_Core && DvLyon.HUDCore && DvLyon.HUDCore.version >= 1.1) {
 
 //=============================================================================
 // Plugin Start
@@ -229,25 +205,19 @@ if (Imported.DvLyon_HUD_Core && DvLyon.HUDCore && DvLyon.HUDCore.version >= 1.1)
 // Plugin End
 //=============================================================================
 
-} else {
-	const error = 'DvLyon_HUD_Gold requires DvLyon_HUD_Core at the latest version to run.'
-	console.error(error)
-	require('nw.gui').Window.get().showDevTools()
-}
-
 //=============================================================================
 // Version Checker
 //=============================================================================
 
 function versionChecker() {
-	const url = 'https://raw.githubusercontent.com/dvlyon/RMMZ/master/versions.json'
+	const url = 'https://raw.githubusercontent.com/dvlyon/RMMZ/main/versions.json'
 	fetch(url)
 	.then(res => {
 		return res.json()
 	})
 	.then(function(body) {
-		if (body && body.hudgold && (body.hudgold.version > DvLyon.HUDGold.version)) {
-			const text = 'An updated version of DvLyon_HUD_Gold is available at https://dvlyon.com/plugins/hudgold'
+		if (body && body.hudGold && (body.hudGold.version > DvLyon.HUDGold.version)) {
+			const text = 'An updated version of DvLyon_HUD_Gold is available at https://dvlyon.com/plugins/hudGold'
 			console.info(text)
 		}
 	})

@@ -5,32 +5,16 @@
 // RPG Maker MZ - DvLyon_Core.js
 //=============================================================================
 
-var Imported = Imported || {};
-Imported.DvLyon_Core = true;
-
 var DvLyon = DvLyon || {};
 DvLyon.Core = DvLyon.Core || {};
-DvLyon.Core.version = 1.2;
+DvLyon.Core.version = 2;
 
 /*:
--------------------------------------------------------------------------------
 @target MZ
-@title DvLyon Core
-@author DvLyon @ https://dvlyon.com
-@date Sep 16, 2020
-@version 1.2.0
-@filename DvLyon_Core.js
+@plugindesc Core Functions
+@author DvLyon
 @url https://dvlyon.com
-
-Contact:
-
-* Website: https://dvlyon.com
-* Twitter: https://twitter.com/DvLyon
-
--------------------------------------------------------------------------------
-@plugindesc DvLyon Core Functions
-@help 
--------------------------------------------------------------------------------
+@help
 == Description ==
 
 Visit https://dvlyon.com/plugins/core
@@ -48,24 +32,21 @@ appreciate it!
 
 We want to keep growing and making your RMMZ experience better!
 
--------------------------------------------------------------------------------
- *
- * @param SkipTitle
- * @text Skip Title If No Save
- * @desc Skips the title scene (straight to map) if there's no save data. (Default: No)
- * @type boolean
- * @on Yes
- * @off No
- * @default false
- *
- * @param OpenTools
- * @text Auto Open Dev Tools
- * @desc Automatically opens the tools window (F12) on reload. (Default: No)
- * @type boolean
- * @on Yes
- * @off No
- * @default false
- *
+@param SkipTitle
+@text Skip Title If No Save
+@desc Skips the title scene (straight to map) if there's no save data. (Default: No)
+@type boolean
+@on Yes
+@off No
+@default false
+
+@param OpenTools
+@text Auto Open Dev Tools
+@desc Automatically opens the tools window (F12) on reload. (Default: No)
+@type boolean
+@on Yes
+@off No
+@default false
 */
 
 //=============================================================================
@@ -294,7 +275,7 @@ function Game_DvLyon() {
 //=============================================================================
 
 function versionChecker() {
-	const url = 'https://raw.githubusercontent.com/dvlyon/RMMZ/master/versions.json'
+	const url = 'https://raw.githubusercontent.com/dvlyon/RMMZ/main/versions.json'
 	fetch(url)
 	.then(res => {
 		return res.json()

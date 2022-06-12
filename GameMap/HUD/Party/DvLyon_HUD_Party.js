@@ -5,35 +5,21 @@
 // RPG Maker MZ - DvLyon_HUD_Party.js
 //=============================================================================
 
-var Imported = Imported || {};
-Imported.DvLyon_HUD_Party = true;
-
 var DvLyon = DvLyon || {};
 DvLyon.HUDParty = DvLyon.HUDParty || {};
-DvLyon.HUDParty.version = 1;
+DvLyon.HUDParty.version = 2;
 
 /*:
--------------------------------------------------------------------------------
 @target MZ
-@title DvLyon HUD Party
-@author DvLyon @ https://dvlyon.com
-@date Sep 16, 2020
-@version 1.0.0
-@filename DvLyon_HUD_Party.js
+@base DvLyon_HUD_Core
+@orderAfter DvLyon_HUD_Core
+@plugindesc Party HUD
+@author DvLyon
 @url https://dvlyon.com
-
-Contact:
-
-* Website: https://dvlyon.com
-* Twitter: https://twitter.com/DvLyon
-
--------------------------------------------------------------------------------
-@plugindesc DvLyon's Party HUD
 @help 
--------------------------------------------------------------------------------
 == Description ==
 
-Visit https://dvlyon.com/plugins/hudparty
+Visit https://dvlyon.com/plugins/hudParty
 
 == License ==
 
@@ -48,76 +34,66 @@ appreciate it!
 
 We want to keep growing and making your RMMZ experience better!
 
--------------------------------------------------------------------------------
- *
- * @command showHUD
- * @text Party HUD Visibility
- * @desc Sets Party HUD visibility on/off.
- *
- * @arg value
- * @type boolean
- * @text Value
- * @desc Party HUD visibility on/off.
- * @on Show
- * @off Hide
- *
- *
- *
- * @param Default
- * @text Party HUD Default Visibility
- * @desc Default visibility of the Party HUD. (Default: Show)
- * @type boolean
- * @on Show
- * @off Hide
- * @default true
- *
- * @param X
- * @text Party HUD X
- * @desc X position of the party HUD.
- * @type number
- * @default 0
- *
- * @param Y
- * @text Party HUD Y
- * @desc Y position of the party HUD.
- * @type number
- * @default 0
- *
- * @param Size
- * @text Party HUD Actor Size
- * @desc Size (width & height) of the party HUD actor faces.
- * @type number
- * @default 36
- *
- * @param Width
- * @text Party HUD Bar Width
- * @desc Width of the party HUD hp/mana gauges.
- * @type number
- * @default 8
- *
- * @param Mana
- * @text Display Mana
- * @desc Should the mana be displayed?
- * @type boolean
- * @on Yes
- * @off No
- * @default false
- *
- * @param Window
- * @text Windowskin
- * @desc Windowskin for the party HUD.
- * @type file
- * @dir img/system/
- * @require 1
- * @default Window
- *
+@command showHUD
+@text Party HUD Visibility
+@desc Sets Party HUD visibility on/off.
+
+@arg value
+@type boolean
+@text Value
+@desc Party HUD visibility on/off.
+@on Show
+@off Hide
+
+
+@param Default
+@text Party HUD Default Visibility
+@desc Default visibility of the Party HUD. (Default: Show)
+@type boolean
+@on Show
+@off Hide
+@default true
+
+@param X
+@text Party HUD X
+@desc X position of the party HUD.
+@type number
+@default 0
+
+@param Y
+@text Party HUD Y
+@desc Y position of the party HUD.
+@type number
+@default 0
+
+@param Size
+@text Party HUD Actor Size
+@desc Size (width & height) of the party HUD actor faces.
+@type number
+@default 36
+
+@param Width
+@text Party HUD Bar Width
+@desc Width of the party HUD hp/mana gauges.
+@type number
+@default 8
+
+@param Mana
+@text Display Mana
+@desc Should the mana be displayed?
+@type boolean
+@on Yes
+@off No
+@default false
+
+@param Window
+@text Windowskin
+@desc Windowskin for the party HUD.
+@type file
+@dir img/system/
+@require 1
+@default Window
 */
-
-//=============================================================================
-// Dependencies
-//=============================================================================
-
-if (Imported.DvLyon_HUD_Core && DvLyon.HUDCore && DvLyon.HUDCore.version >= 1.2) {
 
 //=============================================================================
 // Plugin Start
@@ -162,7 +138,7 @@ if (Imported.DvLyon_HUD_Core && DvLyon.HUDCore && DvLyon.HUDCore.version >= 1.2)
 	}
 
 	Game_DvLyon.prototype.isPartyHUDVisible = function() {
-		const minLength = Imported.DvLyon_HUD_Leader && DvLyon.HUDLeader && !!this.isLeaderHUDVisible() ? 1 : 0
+		const minLength = DvLyon.HUDLeader && !!this.isLeaderHUDVisible() ? 1 : 0
 		return this._showPartyHUD && $gameParty.allMembers().length > minLength
 	}
 
@@ -229,7 +205,7 @@ if (Imported.DvLyon_HUD_Core && DvLyon.HUDCore && DvLyon.HUDCore.version >= 1.2)
 	}
 
 	Window_DvLyonHUDParty.prototype.refresh = function() {
-		const leader = Imported.DvLyon_HUD_Leader && DvLyon.HUDLeader && !!$gameDvLyon.isLeaderHUDVisible() ? 1 : 0
+		const leader = DvLyon.HUDLeader && !!$gameDvLyon.isLeaderHUDVisible() ? 1 : 0
 		const members = $gameParty.allMembers()
 		const length = members.length
 		this.setLength(length, leader)
@@ -262,18 +238,12 @@ if (Imported.DvLyon_HUD_Core && DvLyon.HUDCore && DvLyon.HUDCore.version >= 1.2)
 // Plugin End
 //=============================================================================
 
-} else {
-	const error = 'DvLyon_HUD_Party requires DvLyon_HUD_Core at the latest version to run.'
-	console.error(error)
-	require('nw.gui').Window.get().showDevTools()
-}
-
 //=============================================================================
 // Version Checker
 //=============================================================================
 
 function versionChecker() {
-	const url = 'https://raw.githubusercontent.com/dvlyon/RMMZ/master/versions.json'
+	const url = 'https://raw.githubusercontent.com/dvlyon/RMMZ/main/versions.json'
 	fetch(url)
 	.then(res => {
 		return res.json()

@@ -5,35 +5,21 @@
 // RPG Maker MZ - DvLyon_HUD_Leader.js
 //=============================================================================
 
-var Imported = Imported || {};
-Imported.DvLyon_HUD_Leader = true;
-
 var DvLyon = DvLyon || {};
 DvLyon.HUDLeader = DvLyon.HUDLeader || {};
-DvLyon.HUDLeader.version = 1.1;
+DvLyon.HUDLeader.version = 2;
 
 /*:
--------------------------------------------------------------------------------
 @target MZ
-@title DvLyon HUD Leader
-@author DvLyon @ https://dvlyon.com
-@date Sep 13, 2020
-@version 1.1.0
-@filename DvLyon_HUD_Leader.js
+@base DvLyon_HUD_Core
+@orderAfter DvLyon_HUD_Core
+@plugindesc Party Leader HUD
+@author DvLyon
 @url https://dvlyon.com
-
-Contact:
-
-* Website: https://dvlyon.com
-* Twitter: https://twitter.com/DvLyon
-
--------------------------------------------------------------------------------
-@plugindesc DvLyon's Leader HUD
-@help 
--------------------------------------------------------------------------------
+@help
 == Description ==
 
-Visit https://dvlyon.com/plugins/hudleader
+Visit https://dvlyon.com/plugins/hudLeader
 
 == License ==
 
@@ -48,102 +34,92 @@ appreciate it!
 
 We want to keep growing and making your RMMZ experience better!
 
--------------------------------------------------------------------------------
- *
- * @command showHUD
- * @text Leader HUD Visibility
- * @desc Sets leader HUD visibility on/off.
- *
- * @arg value
- * @type boolean
- * @text Value
- * @desc Leader HUD visibility on/off.
- * @on Show
- * @off Hide
- *
- *
- *
- * @param Default
- * @text Leader HUD Default Visibility
- * @desc Default visibility of the Leader HUD. (Default: Show)
- * @type boolean
- * @on Show
- * @off Hide
- * @default true
- *
- * @param X
- * @text Leader HUD X
- * @desc X position of the leader HUD.
- * @type number
- * @default 0
- *
- * @param Y
- * @text Leader HUD Y
- * @desc Y position of the leader HUD.
- * @type number
- * @default 528
- *
- * @param Width
- * @text Leader HUD Width
- * @desc Width of the leader HUD.
- * @type number
- * @default 240
- *
- * @param Mana
- * @text Display Mana Bar
- * @desc Should the mana bar be displayed?
- * @type boolean
- * @on Yes
- * @off No
- * @default false
- *
- * @param Bar
- * @text Background Health Bar
- * @desc Background health bar image.
- * @type file
- * @dir img/dvlyon/
- * @require 1
- * @default
- *
- * @param BarFill
- * @text Filled Health Bar
- * @desc Filled health bar image.
- * @type file
- * @dir img/dvlyon/
- * @require 1
- * @default
- *
- * @param ManaBar
- * @text Background Mana Bar
- * @desc Background mana bar image.
- * @type file
- * @dir img/dvlyon/
- * @require 1
- * @default
- *
- * @param ManaBarFill
- * @text Filled Mana Bar
- * @desc Filled mana bar image.
- * @type file
- * @dir img/dvlyon/
- * @require 1
- * @default
- *
- * @param Window
- * @text Windowskin
- * @desc Windowskin for the leader HUD.
- * @type file
- * @dir img/system/
- * @require 1
- * @default Window
- *
+@command showHUD
+@text Leader HUD Visibility
+@desc Sets leader HUD visibility on/off.
+
+@arg value
+@type boolean
+@text Value
+@desc Leader HUD visibility on/off.
+@on Show
+@off Hide
+
+
+@param Default
+@text Leader HUD Default Visibility
+@desc Default visibility of the Leader HUD. (Default: Show)
+@type boolean
+@on Show
+@off Hide
+@default true
+
+@param X
+@text Leader HUD X
+@desc X position of the leader HUD.
+@type number
+@default 0
+
+@param Y
+@text Leader HUD Y
+@desc Y position of the leader HUD.
+@type number
+@default 528
+
+@param Width
+@text Leader HUD Width
+@desc Width of the leader HUD.
+@type number
+@default 240
+
+@param Mana
+@text Display Mana Bar
+@desc Should the mana bar be displayed?
+@type boolean
+@on Yes
+@off No
+@default false
+
+@param Bar
+@text Background Health Bar
+@desc Background health bar image.
+@type file
+@dir img/dvlyon/
+@require 1
+@default
+
+@param BarFill
+@text Filled Health Bar
+@desc Filled health bar image.
+@type file
+@dir img/dvlyon/
+@require 1
+@default
+
+@param ManaBar
+@text Background Mana Bar
+@desc Background mana bar image.
+@type file
+@dir img/dvlyon/
+@require 1
+@default
+
+@param ManaBarFill
+@text Filled Mana Bar
+@desc Filled mana bar image.
+@type file
+@dir img/dvlyon/
+@require 1
+@default
+
+@param Window
+@text Windowskin
+@desc Windowskin for the leader HUD.
+@type file
+@dir img/system/
+@require 1
+@default Window
 */
-
-//=============================================================================
-// Dependencies
-//=============================================================================
-
-if (Imported.DvLyon_HUD_Core && DvLyon.HUDCore && DvLyon.HUDCore.version >= 1.1) {
 
 //=============================================================================
 // Plugin Start
@@ -279,28 +255,18 @@ if (Imported.DvLyon_HUD_Core && DvLyon.HUDCore && DvLyon.HUDCore.version >= 1.1)
 })()
 
 //=============================================================================
-// Plugin End
-//=============================================================================
-
-} else {
-	const error = 'DvLyon_HUD_Leader requires DvLyon_HUD_Core at the latest version to run.'
-	console.error(error)
-	require('nw.gui').Window.get().showDevTools()
-}
-
-//=============================================================================
 // Version Checker
 //=============================================================================
 
 function versionChecker() {
-	const url = 'https://raw.githubusercontent.com/dvlyon/RMMZ/master/versions.json'
+	const url = 'https://raw.githubusercontent.com/dvlyon/RMMZ/main/versions.json'
 	fetch(url)
 	.then(res => {
 		return res.json()
 	})
 	.then(function(body) {
-		if (body && body.hudleader && (body.hudleader.version > DvLyon.HUDLeader.version)) {
-			const text = 'An updated version of DvLyon_HUD_Leader is available at https://dvlyon.com/plugins/hudleader'
+		if (body && body.hudLeader && (body.hudLeader.version > DvLyon.HUDLeader.version)) {
+			const text = 'An updated version of DvLyon_HUD_Leader is available at https://dvlyon.com/plugins/hudLeader'
 			console.info(text)
 		}
 	})

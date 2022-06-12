@@ -5,35 +5,21 @@
 // RPG Maker MZ - DvLyon_HUD_Map.js
 //=============================================================================
 
-var Imported = Imported || {};
-Imported.DvLyon_HUD_Map = true;
-
 var DvLyon = DvLyon || {};
 DvLyon.HUDMap = DvLyon.HUDMap || {};
-DvLyon.HUDMap.version = 1.1;
+DvLyon.HUDMap.version = 2;
 
 /*:
--------------------------------------------------------------------------------
 @target MZ
-@title DvLyon HUD Map
-@author DvLyon @ https://dvlyon.com
-@date Sep 13, 2020
-@version 1.1.0
-@filename DvLyon_HUD_Map.js
+@base DvLyon_HUD_Core
+@orderAfter DvLyon_HUD_Core
+@plugindesc Map Name HUD
+@author DvLyon
 @url https://dvlyon.com
-
-Contact:
-
-* Website: https://dvlyon.com
-* Twitter: https://twitter.com/DvLyon
-
--------------------------------------------------------------------------------
-@plugindesc DvLyon's Map HUD
-@help 
--------------------------------------------------------------------------------
+@help
 == Description ==
 
-Visit https://dvlyon.com/plugins/hudmap
+Visit https://dvlyon.com/plugins/hudMap
 
 == License ==
 
@@ -48,62 +34,52 @@ appreciate it!
 
 We want to keep growing and making your RMMZ experience better!
 
--------------------------------------------------------------------------------
- *
- * @command showHUD
- * @text Map HUD Visibility
- * @desc Sets map HUD visibility on/off.
- *
- * @arg value
- * @type boolean
- * @text Value
- * @desc Map HUD visibility on/off.
- * @on Show
- * @off Hide
- *
- *
- *
- * @param Default
- * @text Map HUD Default Visibility
- * @desc Default visibility of the map HUD. (Default: Show)
- * @type boolean
- * @on Show
- * @off Hide
- * @default true
- *
- * @param X
- * @text Map HUD X
- * @desc X position of the map HUD.
- * @type number
- * @default 288
- *
- * @param Y
- * @text Map HUD Y
- * @desc Y position of the map HUD.
- * @type number
- * @default 0
-  *
- * @param Width
- * @text Map HUD Width
- * @desc Width of the map HUD.
- * @type number
- * @default 240
- *
- * @param Window
- * @text Windowskin
- * @desc Windowskin for the map HUD.
- * @type file
- * @dir img/system/
- * @require 1
- * @default Window
- *
+@command showHUD
+@text Map HUD Visibility
+@desc Sets map HUD visibility on/off.
+
+@arg value
+@type boolean
+@text Value
+@desc Map HUD visibility on/off.
+@on Show
+@off Hide
+
+
+@param Default
+@text Map HUD Default Visibility
+@desc Default visibility of the map HUD. (Default: Show)
+@type boolean
+@on Show
+@off Hide
+@default true
+
+@param X
+@text Map HUD X
+@desc X position of the map HUD.
+@type number
+@default 288
+
+@param Y
+@text Map HUD Y
+@desc Y position of the map HUD.
+@type number
+@default 0
+
+@param Width
+@text Map HUD Width
+@desc Width of the map HUD.
+@type number
+@default 240
+
+@param Window
+@text Windowskin
+@desc Windowskin for the map HUD.
+@type file
+@dir img/system/
+@require 1
+@default Window
 */
-
-//=============================================================================
-// Dependencies
-//=============================================================================
-
-if (Imported.DvLyon_HUD_Core && DvLyon.HUDCore && DvLyon.HUDCore.version >= 1.1) {
 
 //=============================================================================
 // Plugin Start
@@ -221,25 +197,19 @@ if (Imported.DvLyon_HUD_Core && DvLyon.HUDCore && DvLyon.HUDCore.version >= 1.1)
 // Plugin End
 //=============================================================================
 
-} else {
-	const error = 'DvLyon_HUD_Map requires DvLyon_HUD_Core at the latest version to run.'
-	console.error(error)
-	require('nw.gui').Window.get().showDevTools()
-}
-
 //=============================================================================
 // Version Checker
 //=============================================================================
 
 function versionChecker() {
-	const url = 'https://raw.githubusercontent.com/dvlyon/RMMZ/master/versions.json'
+	const url = 'https://raw.githubusercontent.com/dvlyon/RMMZ/main/versions.json'
 	fetch(url)
 	.then(res => {
 		return res.json()
 	})
 	.then(function(body) {
-		if (body && body.hudmap && (body.hudmap.version > DvLyon.HUDMap.version)) {
-			const text = 'An updated version of DvLyon_HUD_Map is available at https://dvlyon.com/plugins/hudmap'
+		if (body && body.hudMap && (body.hudMap.version > DvLyon.HUDMap.version)) {
+			const text = 'An updated version of DvLyon_HUD_Map is available at https://dvlyon.com/plugins/hudMap'
 			console.info(text)
 		}
 	})
