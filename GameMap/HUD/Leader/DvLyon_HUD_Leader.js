@@ -19,7 +19,7 @@ DvLyon.HUDLeader.version = 2;
 @help
 == Description ==
 
-Visit https://dvlyon.com/plugins/hudLeader
+Visit https://dvlyon.com/rmmz/plugins/hudLeader
 
 == License ==
 
@@ -264,7 +264,7 @@ function versionChecker() {
 	})
 	.then(function(body) {
 		if (body && body.hudLeader && (body.hudLeader.version > DvLyon.HUDLeader.version)) {
-			const text = 'An updated version of DvLyon_HUD_Leader is available at https://dvlyon.com/plugins/hudLeader'
+			const text = 'An updated version of DvLyon_HUD_Leader is available at https://dvlyon.com/rmmz/plugins/hudLeader'
 			console.info(text)
 		}
 	})

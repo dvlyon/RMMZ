@@ -4,7 +4,7 @@
 
 ### Description
 
-DvLyon_Core is the core of all plugin functionality for the [DvLyon](https://dvlyon.com) collection of RPG Maker MZ plugins. It is required by all of my plugins, and comes with some nifty extra functions specially tailored for game development.
+DvLyon_Core is the core of all plugin functionality for the [DvLyon](https://dvlyon.com) collection of RPG Maker MZ plugins. It is required by all the plugins, and comes with some nifty extra functions specially tailored for game development.
 
 ### License
 
@@ -30,7 +30,7 @@ If active, the game would start directly when there's no save game data. (Skips 
 ##### Auto Open Dev Tools
 ###### boolean
 
-If active, opens the development tools on game load, also on refresh. Meant for game development.
+If active, opens the development tools on game load and refresh. Meant for game development.
 
 ### Changelog
 
@@ -49,4 +49,4 @@ If you could credit [DvLyon](https://dvlyon.com) in your games, I'd really appre
 
 ### Contacting
 
-Multiple ways of reaching me are available at [DvLyon](https://dvlyon.com).
+Multiple ways of contacting me are available at [DvLyon](https://dvlyon.com).

@@ -19,7 +19,7 @@ DvLyon.MadeBy.version = 2;
 @help
 == Description ==
 
-Visit https://dvlyon.com/plugins/madeBy
+Visit https://dvlyon.com/rmmz/plugins/madeBy
 
 == License ==
 
@@ -179,7 +179,7 @@ function versionChecker() {
 	})
 	.then(body => {
 		if (body && body.madeBy && (body.madeBy.version > DvLyon.MadeBy.version)) {
-			const text = 'An updated version of DvLyon_MadeBy is available at https://dvlyon.com/plugins/madeBy'
+			const text = 'An updated version of DvLyon_MadeBy is available at https://dvlyon.com/rmmz/plugins/madeBy'
 			console.info(text)
 		}
 	})

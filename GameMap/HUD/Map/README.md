@@ -4,7 +4,7 @@
 
 ### Description
 
-DvLyon_HUD_Map is a HUD module that simply shows the current map's display name.
+DvLyon_HUD_Map is a HUD module that shows the current map's display name.
 
 ### License
 
@@ -74,4 +74,4 @@ If you could credit [DvLyon](https://dvlyon.com) in your games, I'd really appre
 
 ### Contacting
 
-Multiple ways of reaching me are available at [DvLyon](https://dvlyon.com).
+Multiple ways of contacting me are available at [DvLyon](https://dvlyon.com).

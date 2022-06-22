@@ -19,7 +19,7 @@ DvLyon.HUDMap.version = 2;
 @help
 == Description ==
 
-Visit https://dvlyon.com/plugins/hudMap
+Visit https://dvlyon.com/rmmz/plugins/hudMap
 
 == License ==
 
@@ -207,7 +207,7 @@ function versionChecker() {
 	})
 	.then(function(body) {
 		if (body && body.hudMap && (body.hudMap.version > DvLyon.HUDMap.version)) {
-			const text = 'An updated version of DvLyon_HUD_Map is available at https://dvlyon.com/plugins/hudMap'
+			const text = 'An updated version of DvLyon_HUD_Map is available at https://dvlyon.com/rmmz/plugins/hudMap'
 			console.info(text)
 		}
 	})

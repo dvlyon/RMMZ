@@ -19,7 +19,7 @@ DvLyon.HUDCore.version = 2;
 @help 
 == Description ==
 
-Visit https://dvlyon.com/plugins/hudCore
+Visit https://dvlyon.com/rmmz/plugins/hudCore
 
 == License ==
 
@@ -130,7 +130,7 @@ function versionChecker() {
 	})
 	.then(function(body) {
 		if (body && body.hudCore && (body.hudCore.version > DvLyon.HUDCore.version)) {
-			const text = 'An updated version of DvLyon_HUD_Core is available at https://dvlyon.com/plugins/hudCore'
+			const text = 'An updated version of DvLyon_HUD_Core is available at https://dvlyon.com/rmmz/plugins/hudCore'
 			console.info(text)
 		}
 	})

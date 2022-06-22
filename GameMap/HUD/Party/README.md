@@ -81,4 +81,4 @@ If you could credit [DvLyon](https://dvlyon.com) in your games, I'd really appre
 
 ### Contacting
 
-Multiple ways of reaching me are available at [DvLyon](https://dvlyon.com).
+Multiple ways of contacting me are available at [DvLyon](https://dvlyon.com).

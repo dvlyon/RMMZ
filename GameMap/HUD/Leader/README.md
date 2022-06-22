@@ -4,7 +4,7 @@
 
 ### Description
 
-DvLyon_HUD_Leader is a HUD module that displays the current leader's health and mana using custom bar images.
+DvLyon_HUD_Leader is a HUD module that displays the current leader's health and/or mana using custom bar images.
 
 ### License
 
@@ -108,4 +108,4 @@ If you could credit [DvLyon](https://dvlyon.com) in your games, I'd really appre
 
 ### Contacting
 
-Multiple ways of reaching me are available at [DvLyon](https://dvlyon.com).
+Multiple ways of contacting me are available at [DvLyon](https://dvlyon.com).

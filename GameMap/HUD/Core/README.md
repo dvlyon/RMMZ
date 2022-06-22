@@ -4,7 +4,7 @@
 
 ### Description
 
-DvLyon_HUD_Core is the core of the modular HUD plugin functionality for the [DvLyon](https://dvlyon.com) collection of RPG Maker MZ HUD plugins. It is required by all of our HUD plugins, and comes with some nifty extra functions specially tailored for game development.
+DvLyon_HUD_Core is the core of the modular HUD plugin functionality for the [DvLyon](https://dvlyon.com) collection of RPG Maker MZ HUD plugins. It is required by all the HUD plugins.
 
 ### License
 
@@ -41,4 +41,4 @@ If you could credit [DvLyon](https://dvlyon.com) in your games, I'd really appre
 
 ### Contacting
 
-Multiple ways of reaching me are available at [DvLyon](https://dvlyon.com).
+Multiple ways of contacting me are available at [DvLyon](https://dvlyon.com).

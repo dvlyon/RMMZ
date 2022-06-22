@@ -19,7 +19,7 @@ DvLyon.HUDParty.version = 2;
 @help 
 == Description ==
 
-Visit https://dvlyon.com/plugins/hudParty
+Visit https://dvlyon.com/rmmz/plugins/hudParty
 
 == License ==
 
@@ -248,7 +248,7 @@ function versionChecker() {
 	})
 	.then(function(body) {
 		if (body && body.hudParty && (body.hudParty.version > DvLyon.HUDParty.version)) {
-			const text = 'An updated version of DvLyon_HUD_Party is available at https://dvlyon.com/plugins/hudParty'
+			const text = 'An updated version of DvLyon_HUD_Party is available at https://dvlyon.com/rmmz/plugins/hudParty'
 			console.info(text)
 		}
 	})

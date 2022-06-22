@@ -19,7 +19,7 @@ DvLyon.HUDGold.version = 2;
 @help
 == Description ==
 
-Visit https://dvlyon.com/plugins/hudGold
+Visit https://dvlyon.com/rmmz/plugins/hudGold
 
 == License ==
 
@@ -215,7 +215,7 @@ function versionChecker() {
 	})
 	.then(function(body) {
 		if (body && body.hudGold && (body.hudGold.version > DvLyon.HUDGold.version)) {
-			const text = 'An updated version of DvLyon_HUD_Gold is available at https://dvlyon.com/plugins/hudGold'
+			const text = 'An updated version of DvLyon_HUD_Gold is available at https://dvlyon.com/plugins/rmmz/hudGold'
 			console.info(text)
 		}
 	})
