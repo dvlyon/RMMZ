@@ -17,7 +17,7 @@ DvLyon.Core.version = 2;
 @help
 == Description ==
 
-Visit https://dvlyon.com/plugins/core
+Visit https://dvlyon.com/rmmz/plugins/core
 
 == License ==
 
@@ -280,7 +280,7 @@ function versionChecker() {
 	})
 	.then(function(body) {
 		if (body && body.core && (body.core.version > DvLyon.Core.version)) {
-			const text = 'An updated version of DvLyon_Core is available at https://dvlyon.com/plugins/core'
+			const text = 'An updated version of DvLyon_Core is available at https://dvlyon.com/rmmz/plugins/core'
 			console.info(text)
 		}
 	})

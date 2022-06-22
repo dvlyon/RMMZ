@@ -4,7 +4,7 @@
 
 ### Description
 
-DvLyon_Core is the core of all plugin functionality for the [DvLyon](https://dvlyon.com) collection of RPG Maker MZ plugins. It is required by all of our plugins, and comes with some nifty extra functions specially tailored for game development.
+DvLyon_Core is the core of all plugin functionality for the [DvLyon](https://dvlyon.com) collection of RPG Maker MZ plugins. It is required by all of my plugins, and comes with some nifty extra functions specially tailored for game development.
 
 ### License
 
