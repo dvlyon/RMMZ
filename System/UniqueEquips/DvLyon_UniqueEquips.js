@@ -27,10 +27,12 @@ Visit https://dvlyon.com/rmmz/plugins/uniqueEquips
   License, v. 2.0. If a copy of the MPL was not distributed with this
   file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-== Contributing ==
+== Support ==
 
-If you could credit DvLyon and https://dvlyon.com, I'd really
-appreciate it!
+Crediting DvLyon.com in your games is much appreciated!
+
+Follow us on socials:
+@dvlyon on Twitter, Instagram, Twitch, TikTok and more!
 */
 
 //=============================================================================
@@ -168,7 +170,8 @@ function Game_DvLyonArmour() {
         return this._uniqueEquips.find(ue => ue._uniqueEquipId === uniqueEquipId)
     }
 
-    Game_DvLyon.prototype.gainUniqueEquip = function(uniqueEquip) {
+    Game_DvLyon.prototype.gainUniqueEquip = function(isWeapon, itemId) {
+        let uniqueEquip = isWeapon ? new Game_DvLyonWeapon(itemId) : new Game_DvLyonArmour(itemId)
         this._uniqueEquips.push(uniqueEquip)
 	}
 
@@ -250,19 +253,19 @@ function Game_DvLyonArmour() {
 
     const _Game_Party_gainItem = Game_Party.prototype.gainItem
     Game_Party.prototype.gainItem = function(item, amount, includeEquip) {
-        if (amount < 0 && (DataManager.isWeapon(item) || DataManager.isArmor(item))) {
+        if (amount < 0 && (DataManager.isWeapon(item) || DataManager.isArmor(item)) && item._uniqueEquipId) {
             $gameDvLyon.loseUniqueEquip(item._uniqueEquipId)
             $gameMap.requestRefresh()
         } else if (DataManager.isWeapon(item)) {
             for (let i = 0; i < amount; i++) {
-                $gameDvLyon.gainUniqueEquip(new Game_DvLyonWeapon(item.id))
-                $gameMap.requestRefresh()
+                $gameDvLyon.gainUniqueEquip(true, item.id)
             }
+            $gameMap.requestRefresh()
         } else if (DataManager.isArmor(item)) {
             for (let i = 0; i < amount; i++) {
-                $gameDvLyon.gainUniqueEquip(new Game_DvLyonArmour(item.id))
-                $gameMap.requestRefresh()
+                $gameDvLyon.gainUniqueEquip(false, item.id)
             }
+            $gameMap.requestRefresh()
         } else {
             _Game_Party_gainItem.call(this, item, amount, includeEquip)
         }

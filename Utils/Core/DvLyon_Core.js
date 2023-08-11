@@ -7,7 +7,7 @@
 
 var DvLyon = DvLyon || {};
 DvLyon.Core = DvLyon.Core || {};
-DvLyon.Core.version = 2;
+DvLyon.Core.version = 2.1;
 
 /*:
 @target MZ
@@ -25,10 +25,12 @@ Visit https://dvlyon.com/rmmz/plugins/core
   License, v. 2.0. If a copy of the MPL was not distributed with this
   file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-== Contributing ==
+== Support ==
 
-If you could credit DvLyon and https://dvlyon.com, I'd really
-appreciate it!
+Crediting DvLyon.com in your games is much appreciated!
+
+Follow us on socials:
+@dvlyon on Twitter, Instagram, Twitch, TikTok and more!
 
 @param SkipTitle
 @text Skip Title If No Save
@@ -67,7 +69,7 @@ function toBool(str, def) {
 		case 'false':
 			return false
 		default:
-			return !!def ? true : false
+			return !!def
 	}
 }
 
@@ -100,7 +102,7 @@ function Game_DvLyon() {
 	// Managers
 	//=============================================================================
 
-	/* DataManager */
+	// DataManager
 
 	const _DataManager_createGameObjects = DataManager.createGameObjects
 	DataManager.createGameObjects = function() {
@@ -121,13 +123,13 @@ function Game_DvLyon() {
 		$gameDvLyon = contents.dvlyon
 	}
 
-	/* ImageManager */
+	// ImageManager
 
 	ImageManager.loadDvLyon = function(filename) {
 		return this.loadBitmap('img/dvlyon/', filename)
 	}
 
-	/* SceneManager */
+	// SceneManager
 
 	SceneManager.isCurrentScene = function(sceneClass) {
 		return this._scene && this._scene.constructor === sceneClass
@@ -152,7 +154,7 @@ function Game_DvLyon() {
 	// Scenes
 	//=============================================================================
 
-	/* Scene_Boot */
+	// Scene_Boot
 
 	const _Scene_Boot_start = Scene_Boot.prototype.start
 	Scene_Boot.prototype.start = function() {
@@ -175,7 +177,7 @@ function Game_DvLyon() {
 	// Windows
 	//=============================================================================
 
-	/* Window_Base */
+	// Window_Base
 
 	Window_Base.prototype.drawFace = function(faceName, faceIndex, x, y, width, height) {
 		width = width || ImageManager.faceWidth
