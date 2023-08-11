@@ -1,10 +1,10 @@
-# DvLyon HUD Core
+# DvLyon - Unique Equips
 
 ## DvLyon - RMMZ
 
 ### Description
 
-DvLyon_HUD_Core is the core of the modular HUD plugin functionality for the [DvLyon](https://dvlyon.com) collection of RPG Maker MZ HUD plugins. It is required by all the HUD plugins.
+DvLyon_UniqueEquips turns your weapons and armours into individual items, no longer stacked! This allows for customisation of equipments and it's the core functionality for all weapon and/or armour plugins functionalities.
 
 ### License
 
@@ -26,20 +26,15 @@ Simply install and activate.
 
 ### Changelog
 
-* 2.1.0 - 11/08/23
-  * Minor improvements.
-* 2.0.0 - Jun 22, 2021
-  * Project cleanup.
-* 1.2.0 - Sep 16, 2020
-  * Updated DvLyon Core dependency to suit DvLyon Party HUD.
-* 1.1.0 - Sep 13, 2020
-  * HUD windows now hide when a game message appears.
-* 1.0.0 - Aug 26, 2020
+* 1.0.0 - 11/08/23
   * Release.
 
-### Contributing
+### Support
 
-If you could credit [DvLyon](https://dvlyon.com) in your games, I'd really appreciate it!
+Crediting DvLyon.com in your games is much appreciated!
+
+Follow us on socials:
+@dvlyon on Twitter, Instagram, Twitch, TikTok and more!
 
 ### Contacting
 

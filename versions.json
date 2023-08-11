@@ -4,7 +4,7 @@
 		"name": "Core Functions",
 		"priority": "high",
 		"url": "Utils/Core/",
-		"version": 2
+		"version": 2.1
 	},
     "madeBy": {
 		"filename": "DvLyon_MadeBy.js",
@@ -47,5 +47,12 @@
 		"priority": "normal",
 		"url": "GameMap/HUD/Party/",
 		"version": 2
+	},
+	"uniqueEquips": {
+		"filename": "DvLyon_UniqueEquips.js",
+		"name": "Unique Equips",
+		"priority": "new",
+		"url": "System/UniqueEquips/",
+		"version": 1
 	}
 }

@@ -12,9 +12,12 @@ All plugins distributed here must abide to the following license, unless explici
 
 [Mozilla Public License Version 2.0](http://mozilla.org/MPL/2.0/ "Mozilla Public License Version 2.0")
 
-## Contributing
+## Support
 
-If you could credit [DvLyon](https://dvlyon.com) in your games, I'd really appreciate it!
+Crediting DvLyon.com in your games is much appreciated!
+
+Follow us on socials:
+@dvlyon on Twitter, Instagram, Twitch, TikTok and more!
 
 ## Contacting
 
