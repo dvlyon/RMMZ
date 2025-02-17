@@ -120,6 +120,7 @@ function Game_DvLyon() {
 	const _DataManager_extractSaveContents = DataManager.extractSaveContents
 	DataManager.extractSaveContents = function(contents) {
 		_DataManager_extractSaveContents.call(this, contents)
+		console.log(contents.dvlyon)
 		$gameDvLyon = contents.dvlyon
 	}
 
