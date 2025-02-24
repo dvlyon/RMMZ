@@ -63,10 +63,15 @@ function makeDefaultStats() {
 			p: 0,
 		},
 		Encounters: {
-			// Predefine some keys so they’re always objects
 			t: {},
 			p: {},
 		},
+        Skills: {
+            p: {}
+        },
+        Items: {
+            p: {}
+        },
 	};
 }
 
@@ -193,6 +198,44 @@ function makeDefaultStats() {
         this.StatsTracker.Encounters[actorId][enemyId][result]++;
     };
 
+    Game_DvLyon.prototype.addSkill = function(actorId, skillId) {
+        // Make sure the actor sub-object exists
+        if (!this.StatsTracker.Skills[actorId]) {
+            this.StatsTracker.Skills[actorId] = {};
+        }
+        // If the specific skill wasn't tracked yet, start at zero
+        if (!this.StatsTracker.Skills[actorId][skillId]) {
+            this.StatsTracker.Skills[actorId][skillId] = 0;
+        }
+        // Increment usage for that actor
+        this.StatsTracker.Skills[actorId][skillId]++;
+    
+        // Also track a party-wide total for that skill
+        if (!this.StatsTracker.Skills.p[skillId]) {
+            this.StatsTracker.Skills.p[skillId] = 0;
+        }
+        this.StatsTracker.Skills.p[skillId]++;
+    };
+    
+    Game_DvLyon.prototype.addItem = function(actorId, itemId) {
+        // Make sure the actor sub-object exists
+        if (!this.StatsTracker.Items[actorId]) {
+            this.StatsTracker.Items[actorId] = {};
+        }
+        // If the specific item wasn't tracked yet, start at zero
+        if (!this.StatsTracker.Items[actorId][itemId]) {
+            this.StatsTracker.Items[actorId][itemId] = 0;
+        }
+        // Increment usage for that actor
+        this.StatsTracker.Items[actorId][itemId]++;
+    
+        // Also track a party-wide total for that item
+        if (!this.StatsTracker.Items.p[itemId]) {
+            this.StatsTracker.Items.p[itemId] = 0;
+        }
+        this.StatsTracker.Items.p[itemId]++;
+    };    
+
 	// Game_Player
 
 	const _Game_Player_increaseSteps = Game_Player.prototype.increaseSteps
@@ -209,6 +252,21 @@ function makeDefaultStats() {
 		$gameDvLyon.addStep(this.actor()._actorId)
 	}
 
+    // Game_Actor
+
+    const _Game_Actor_paySkillCost = Game_Actor.prototype.paySkillCost
+    Game_Actor.prototype.paySkillCost = function(skill) {
+        _Game_Actor_paySkillCost.call(this, skill);
+        $gameDvLyon.addSkill(this._actorId, skill.id)
+    };
+
+    // Track item usage whenever an actor consumes an item
+    const _Game_Actor_consumeItem = Game_Actor.prototype.consumeItem;
+    Game_Actor.prototype.consumeItem = function(item) {
+        _Game_Actor_consumeItem.call(this, item);
+        $gameDvLyon.addItem(this._actorId, item.id);
+    };
+
 	//=============================================================================
 	// Scenes
 	//=============================================================================
@@ -220,10 +278,6 @@ function makeDefaultStats() {
 	//=============================================================================
 	// Extra
 	//=============================================================================
-
-	if (!!DvLyon.StatsTracker.OpenTools && Utils.isNwjs() && Utils.isOptionValid("test")) {
-		nw.Window.get().showDevTools()
-	}
 
 })()
 
